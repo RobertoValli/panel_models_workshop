@@ -72,23 +72,24 @@
 
 \AtEveryBibitem{\clearfield{labelmonth}}
 
-\addbibresource{notes/refs_workshop.bib}
+\addbibresource{refs_workshop}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{makecell}
+\usepackage{qtree}
+%\usepackage{makecell}
 
 \usepackage[margin = 2.5cm]{geometry}
 \usepackage{lmodern}
-\usepackage{xcolor}
+%\usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{threeparttable}
-\usepackage{rotating}
+%\usepackage{rotating}
 \usepackage{caption} 
 \usepackage{subcaption}
-\captionsetup[table]{skip=10pt}
+%\captionsetup[table]{skip=10pt}
 
 \renewcommand{\baselinestretch}{1.2}
 \setlength{\parskip}{0.5em}
@@ -100,9 +101,12 @@
 	Roberto Valli\thanks{PhD candidate, International Conflict Research, ETH Zurich: roberto.valli@icr.gess.ethz.ch} 
 }
 \title{
-	 Recent Developments in Methods for Causal Inference with Cross-Sectional Time-Series Data\thanks{Find the worshop's GitHub repo at \url{https://github.com/RobertoValli/panel_models_workshop}.}\\[1em]
+	 Recent Developments in Methods for Causal Inference with Cross-Sectional Time-Series Data\thanks{Find the workshop's GitHub repo at \url{https://github.com/RobertoValli/panel_models_workshop}.}\\[1em]
 	 \textit{Workshop Notes}
 }
+
+
+
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
@@ -136,7 +140,49 @@ Under the additional assumption of so-called parallel trends, meaning that the i
 $$ E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 1) = E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0) $$
 it is possible to statistically identify the ATT as
 
-$$ \tau = E(Y_{it}(1)) - E(Y_{it}(0))$$
+$$ \tau = E(Y_{it}(1) - E(Y_{it}(0))$$
+
+The parallel trend assumption is key to understand how DiD estimators predict counterfactuals. In fact, by assuming that the trends in the outcome under control are independent by the realized treatment we justify taking the average change in outcome in the control group $E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0)$ as the trend that the treated units would have had, had they not been treated. Then it becomes easy to make a linear prediction of the counterfactual outcomes under no-treatment condition for the treated units with observed data. It is sufficient to add to the outcome of the treated units at $t=1$ the control units' trend
+$$ E(Y_{i2} | D_{it} = 1) = E(Y_{i1}(0) | D_{it} = 1) + \left[ E(Y_{i2} (0) - Y_{i1}(0) | D_{it} = 0) \right] $$
+
+Now, in the basic two-period setting there are multiple ways of estimating $\tau$, all of which produce equivalent estimates because difference-in-means are always linear over two periods. One might use a non-parametric approach my estimating a difference in means as done in the classic \textcite{Card1990} paper. Alternatively, one might use a two-way fixed effects regression (TWFE) or a first-difference regression which both have the advantage of producing measures of statistical uncertainty \parencite{Angrist2009}.
+
+However, as soon as one's case of interest goes beyond this simple setup, the assumptions and common estimation methods for the ATT start to be violated. Next, I discuss some of the major problems identified by the literature and touch on the solutions out there.
+
+\section{When the Basic DiD Design Breaks Down}
+
+%two or more periods
+The simplest violation of the basic DiD setup emerges when units are observed for more than two periods $t=1, 2, \dots, N$. In this case, \textcite{Angrist2009} already note how the first-difference model cannot be considered an unbiased estimator of $\tau$, since taking first-differences over multiple periods introduces autocorrelation of the outcome and violates the independence of the error term. Nevertheless, the same is not true for the two-way fixed effects model, which can be used in multiple-period settings under the assumption of no effect heterogeneity.
+
+% staggered adoption
+The most significant result in the recent literature on CSTS estimators, and probably the one that contributed the most to its quick development, is the demonstration that the TWFE estimator is a biased estimator of $\tau$ in the common setting of \textit{staggered treatment adoption}. Whenever treated units are not exposed to treatment at the same point in time, but rather adopt treatment in several cohorts, the TWFE estimate of $\hat{\tau}$ is biased towards zero \parencite{GoodmanBacon2021, Callaway2021}. Researchers demonstrated that TWFE estimates are a weighted average of DiD estimates comparing all pairs of periods. The major issue is that some comparisons are undesirable, meaning that they use already-treated cohorts as counterfactual for other treated units. A second problem is that some of the cohort-effects' weights are negative, which creates problem with the interpretation of the aggregate estimate of $\hat{\tau}$. There are various solutions to the weighting and comparison problems, which are explained below.
+
+% non-parallel trends
+
+% effect heterogeneity
+
+% spillovers and anticipation
+
+% non-absorption state
+A treatment is referred to as being in an absorbing state whenever units that are treated cannot revert to being untreated. This is very common in many policy areas, but it does also not apply to many phenomena political scientists want to know the effects of. In fact, there are multiple phenomena in which units can be treated repeatedly over time. There are various problems with repeated and non-absorbing treatments, the major of which is the selection into (repeated) treatment that might bias estimates. However, scholars proposed various methods that allow to deal with these problems, although at the expense of more demanding assumptions.
+
+% continuous treatment
+Finally, one might wonder how DiD designs might be extended to continuous treatment settings. While \textcite{Angrist2009} suggest that the type of treatment does not influence the estimand or estimation quantity, \textcite{deChaisemartin2020} and \textcite{Callaway2021} demonstrate that continuous treatments make settings with staggered adoption and non-heterogeneous effects extremely hard to handle, as well as deserving a complicated notation. In short, there does not seem to be a set of simple tools and guidelines to be employed in DiDs with continuous outcomes.
+
+\section{Which CSTS Model is Right for You?}
+
+Consider the number of treated units $N$.
+
+
+\begin{figure}
+\caption{Heuristic tree of CSTS methods.}
+    \Tree[. [.{N. treated units > 1} [.{T = 2} {Classic DiD} ]
+                           [.{T > 2} [.{Non-absorbing state\\ treatment} {\texttt{PanelMatch}\\ \texttt{fect}\\ \texttt{GSC}} ]
+                                     [.{Absorbing-state\\ treatment} [.{Heterogeneity, spillovers,\\ staggered adoption} ]
+                                                                      [.{Classic DiD with\\multiple periods} \texttt{feols} ]]]]
+            [.{N. treated units = 1} [.{Synthetic control\\ method} ]]
+          ]
+\end{figure}
 
 
 \printbibliography
