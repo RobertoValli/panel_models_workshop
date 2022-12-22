@@ -1,5 +1,5 @@
-# panel_models_workshop
-Short workshop on the latest developments of causal inference with panel data
+# Recent developments in methods for causal inference with panel data
+Materials for a short workshop on the latest developments of causal inference with cross-sectional time-series data.
 
 ## Introduction
 This repo contains materials for a short workshop intended to update advanced researchers on the latest developments of statistical methods for causal inference with observational cross-sectional time-series (CSTS) data. This is definitely a mouthful, and so are many other concepts explained throughout the workshop. 
