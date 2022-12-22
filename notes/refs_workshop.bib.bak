@@ -1,0 +1,12 @@
+@Book{Angrist2009,
+  author    = {Angrist, Joshua and Pischke, Jorn-Steffen},
+  publisher = {Princeton University Press},
+  title     = {{Mostly Harmless Econometrics: An Empiricist's Companion}},
+  year      = {2009},
+  edition   = {1},
+  abstract  = {The core methods in today's econometric toolkit are linear regression for statistical control, instrumental variables methods for the analysis of natural experiments, and differences-in-differences methods that exploit policy changes. In the modern experimentalist paradigm, these techniques address clear causal questions such as: Do smaller classes increase learning? Should wife batterers be arrested? How much does education raise wages? Mostly Harmless Econometrics shows how the basic tools of applied econometrics allow the data to speak. In addition to econometric essentials, Mostly Harmless Econometrics covers important new extensions--regression-discontinuity designs and quantile regression--as well as how to get standard errors right. Joshua Angrist and J\"orn-Steffen Pischke explain why fancier econometric techniques are typically unnecessary and even dangerous. The applied econometric methods emphasized in this book are easy to use and relevant for many areas of contemporary social science. An irreverent review of econometric essentials A focus on tools that applied researchers use most Chapters on regression-discontinuity designs, quantile regression, and standard errors Many empirical examples A clear and concise resource with wide applications},
+  keywords  = {economics; toolkit; econometric; linear; regression; statistics; variables; methods; analysis; natural; experiment; differences; policy; technique; tools; data; discontinuity; quantile; standard; error; social; science; research; design; resource},
+  url       = {https://EconPapers.repec.org/RePEc:pup:pbooks:8769},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

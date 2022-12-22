@@ -1,0 +1,84 @@
+\documentclass[hidelinks]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}    
+\usepackage{csquotes}
+\usepackage[style=apa, backend=biber, maxcitenames=3]{biblatex}
+
+
+\DeclareLanguageMapping{american}{american-apa}
+
+\AtEveryBibitem{\clearfield{labelmonth}}
+
+\addbibresource{notes/refs_workshop.bib}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{makecell}
+
+\usepackage[margin = 2.5cm]{geometry}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{rotating}
+\usepackage{caption} 
+\usepackage{subcaption}
+\captionsetup[table]{skip=10pt}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0em}
+
+\usepackage[breaklinks]{hyperref}
+
+\author{
+	Roberto Valli\thanks{PhD candidate, International Conflict Research, ETH Zurich: roberto.valli@icr.gess.ethz.ch} 
+}
+\title{
+	 Recent Developments in Methods for Causal Inference with Cross-Sectional Time-Series Data\thanks{Find the workshop's GitHub repo at \url{https://github.com/RobertoValli/panel_models_workshop}.}\\[1em]
+	 \textit{Workshop Notes}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Political science is often characterized by research questions that cannot be studied experimentally because ethical or practical reasons prevent treatment manipulation. The impossibility of using true randomization in polisci research makes all the more important to find alternative ways to estimate causal effects of policies and other interventions. These notes discuss recent developments in a specific family of statistical methods that exploit within and across-unit variation over time to approximate estimates of causal effects. 
+
+The goal of these notes in to tie together a recent literature that highlights the limitations of standard difference-in-differences methods (DiD) when it comes to estimating causal effects in complex settings that violate its basic assumptions. The interesting thing about this literature is that not only it develops extremely fast, but it accompanies a harsh critique of common modelling choices to many solutions, practical advice, and R packages to implement more suitable models. However, the fast-moving and technical nature of the literature can be confusing. This is why I wrote these notes, to guide applied researchers to the right references and modelling choices without having to first read everything under the sun.
+
+Note that this document is meant to be a practical guide for advanced researchers with prior knowledge of statistics, basic causal inference designs and programming in \texttt{R}. It is by no means a technical paper, nor an introduction to any of these subjects.
+
+The notes proceed as follows. First, I give a brief overview of causal inference methods with cross-sectional time-series data (CSTS) and its limitations. I start from the standard DiD model and its estimators, and walk through its critique in the literature. Second, I present a heuristic decision model to select the right CSTS method based on one's data. Third, I provide a description of various methods, their assumptions and implementation in \texttt{R}.
+
+\section{Causality and Cross-Sectional Time-Series Data}
+
+The problem of estimating causal effects can be thought of as the challenge of predicting counterfactual outcomes. The impossibility of observing the outcome of a process if something (the treatment condition) had been different is often referred to as the \textit{fundamental problem of causal inference}. The Neymar-Rubin counterfactual outcome framework formalizes one way of thinking about causality in terms of counterfactuals. 
+
+Consider an outcome of interest $Y_{it}$ that is observed for individual $i$ at time $t$. Also, consider a binary treatment $D_{it} \in \{ 0, 1 \}$. The individual causal effect of $D$ on $Y$ can be defined as 
+$$\text{ICE} = Y_{it}(1) - Y_{it}(0)$$
+
+However, since only one of the two terms is ever observed in reality, statistical methods of causal inference find ways to estimate \textit{average causal effects} by predicting the counterfactual outcome under the unobserved treatment condition. In fact, while applied statistics are often divided between causal inference and prediction tasks, prediction is very much at the heart of causal inference methods, although with a strong focus on bias reduction.
+
+Let's consider the classic two-period DiD setup and how it can be thought of as a prediction exercise. The outcome is assumed to be a continuous variable $Y_{it}$ observed over two periods $t=1, 2$, whereas the treatment is assumed to be a dichotomous variable $D_{it} = 0, 1$. The observed value of the outcome can be expressed as:
+$$ Y_{it} = Y_{it}(1)D_{it} + Y_{it}(0)D_{it} $$
+The major contribution of the classic DiD literature \parencite[e.g.,]{Angrist2009} is to demonstrate that under SUTVA\footnote{The \textit{stable unit treatment value assumption} is a set of assumptions such that: i) units composition does not change over time, ii) no treatment heterogeneity exists, iii) no treatment spillovers take place.} assumptions the average treatment effect on the treated (ATT) can be defined as
+$$ \tau = E(Y_{it} (1) - Y_{it}(0) | D_{it} = 1) $$
+
+Under the additional assumption of so-called parallel trends, meaning that the individual \textit{change} in outcome under control between $t = 1, t= 2$ is independent of treatment status, i.e.
+$$ E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 1) = E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0) $$
+it is possible to statistically identify the ATT as
+
+$$ \tau = E(Y_{it}(1) - E(Y_{it}(0))$$
+
+Now, in the basic to-period setting there are multiple ways of estimating $\tau$, all of which produce equivalent estimates. First, one might use a non-parametric approach my estimating a difference in means as done in the classic \textcite{Card1990} paper. Alternatively, one might use a two-way fixed effects regression (TWFE) or a first-difference regression which both have the advantage of producing measures of statistical uncertainty \parencite{Angrist2009}
+
+\printbibliography
+
+\end{document}
