@@ -1,4 +1,4 @@
-# Recent developments in Methods for Causal Inference with panel data
+# Recent developments in methods for causal inference with panel data
 Materials for a short workshop on the latest developments of causal inference with cross-sectional time-series data.
 
 ## Introduction
