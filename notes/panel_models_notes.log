@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  22 DEC 2022 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  23 DEC 2022 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1020,62 +1020,64 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 {C:/Users/vallir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 129.
+(Font)              <7> on input line 131.
 
-LaTeX Warning: Citation 'Angrist2009' on page 2 undefined on input line 136.
-
-
-LaTeX Warning: Citation 'Card1990' on page 2 undefined on input line 148.
+LaTeX Warning: Citation 'Angrist2009' on page 2 undefined on input line 138.
 
 
-LaTeX Warning: Citation '' on page 2 undefined on input line 148.
+LaTeX Warning: Citation 'Abadie2010' on page 2 undefined on input line 152.
 
 
-LaTeX Warning: Citation 'Angrist2009' on page 2 undefined on input line 148.
+LaTeX Warning: Citation 'Roth2022' on page 2 undefined on input line 152.
+
+
+LaTeX Warning: Citation '' on page 2 undefined on input line 152.
 
 [2]
 
-LaTeX Warning: Citation 'Angrist2009' on page 3 undefined on input line 155.
+LaTeX Warning: Citation 'Card1990' on page 3 undefined on input line 154.
 
 
-LaTeX Warning: Citation '' on page 3 undefined on input line 155.
+LaTeX Warning: Citation '' on page 3 undefined on input line 154.
 
 
-LaTeX Warning: Citation 'GoodmanBacon2021' on page 3 undefined on input line 15
-8.
+LaTeX Warning: Citation 'Angrist2009' on page 3 undefined on input line 154.
 
 
-LaTeX Warning: Citation 'Callaway2021' on page 3 undefined on input line 158.
+LaTeX Warning: Citation 'Angrist2009' on page 3 undefined on input line 165.
 
 
-LaTeX Warning: Citation 'Angrist2009' on page 3 undefined on input line 170.
+LaTeX Warning: Citation '' on page 3 undefined on input line 165.
 
 
-LaTeX Warning: Citation '' on page 3 undefined on input line 170.
-
-
-LaTeX Warning: Citation 'deChaisemartin2020' on page 3 undefined on input line 
-170.
-
-
-LaTeX Warning: Citation '' on page 3 undefined on input line 170.
+LaTeX Warning: Citation 'GoodmanBacon2021' on page 3 undefined on input line 17
+0.
 
 
 LaTeX Warning: Citation 'Callaway2021' on page 3 undefined on input line 170.
 
-
-LaTeX Warning: Citation '' on page 3 undefined on input line 170.
-
 [3]
 
-LaTeX Warning: Empty bibliography on input line 188.
+LaTeX Warning: Citation 'Angrist2009' on page 4 undefined on input line 188.
 
-[4] (panel_models_notes.aux)
+
+LaTeX Warning: Citation '' on page 4 undefined on input line 188.
+
+
+LaTeX Warning: Citation 'Callaway2021' on page 4 undefined on input line 188.
+
+
+LaTeX Warning: Citation '' on page 4 undefined on input line 188.
+
+
+LaTeX Warning: Empty bibliography on input line 207.
+
+[4] [5] (panel_models_notes.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `panel_models_notes.out' has not changed.
-(rerunfilecheck)             Checksum: E318B21EEF822EFB7BC2731F92CD4333;865.
+(rerunfilecheck)             Checksum: 937BD22F36C18E9C33B3987311A73D6B;1967.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                panel_models_notes
@@ -1086,13 +1088,13 @@ Package logreq Info: Writing requests to 'panel_models_notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22118 strings out of 478032
- 394160 string characters out of 2827995
- 1215970 words of memory out of 3000000
- 40519 multiletter control sequences out of 15000+600000
- 542518 words of font info for 82 fonts, out of 8000000 for 9000
+ 22130 strings out of 478032
+ 394330 string characters out of 2827995
+ 1213972 words of memory out of 3000000
+ 40525 multiletter control sequences out of 15000+600000
+ 545516 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,70p,1178b,5043s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,11n,70p,1081b,5043s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/
 Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:
@@ -1113,9 +1115,9 @@ Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:
 :/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C
 :/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on panel_models_notes.pdf (4 pages, 324006 bytes).
+Output written on panel_models_notes.pdf (5 pages, 331505 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
