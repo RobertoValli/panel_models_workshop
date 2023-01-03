@@ -10,3 +10,14 @@ The workshop is not meant to be a complete course on causal inference, so it mak
 
 ## Structure
 The workshop is centered around a select number of papers that highlight deficiencies of difference-in-differences models in certain settings and suggest extensions to the standard model. In addition to the readings, I wrote some notes to guide you through the sometimes bewildering array of alternatives, their unique advantages and data requirements/assumptions.
+
+The workshop's contents are the following:
+
+- Overview of DiD literature
+- Quick dust-off of basic DiD model
+- The DiD assumptions violation tree
+- Discussion of selected methods (with R examples):
+  - Staggered treatment adoption
+  - Repeated treatment
+- Pre-treatment trends: What to do?
+- Conclusion
