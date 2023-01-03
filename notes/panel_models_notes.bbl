@@ -19,6 +19,41 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Abadie2005}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=da499bff747c5f6cd0ec9185c820ba4d}{%
+           family={Abadie},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{fullhash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{bibnamehash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{authorbibnamehash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{authornamehash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{authorfullhash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0034-6527}
+      \field{journaltitle}{The Review of Economic Studies}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{{Semiparametric Difference-in-Differences Estimators}}
+      \field{volume}{72}
+      \field{year}{2005}
+      \field{pages}{1\bibrangedash 19}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1111/0034-6527.00321
+      \endverb
+    \endentry
     \entry{Abadie2010}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=da499bff747c5f6cd0ec9185c820ba4d}{%
@@ -106,6 +141,103 @@
       \verb https://EconPapers.repec.org/RePEc:pup:pbooks:8769
       \endverb
       \keyw{economics; toolkit; econometric; linear; regression; statistics; variables; methods; analysis; natural; experiment; differences; policy; technique; tools; data; discontinuity; quantile; standard; error; social; science; research; design; resource}
+    \endentry
+    \entry{Bai2009}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0dc94d98f7e1729d400a45f4d532e4a4}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Jushan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{fullhash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{bibnamehash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{authorbibnamehash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{authornamehash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{authorfullhash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{4}
+      \field{title}{{Panel Data Models With Interactive Fixed Effects}}
+      \field{volume}{77}
+      \field{year}{2009}
+      \field{pages}{1229\bibrangedash 1279}
+      \range{pages}{51}
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.3982/ECTA6135
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA6135
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA6135
+      \endverb
+      \keyw{Additive effects,interactive effects,factor error structure,bias-corrected estimator,Hausman tests,time-invariant regressors,common regressors}
+    \endentry
+    \entry{BenMichael2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=299b529dff40b83e1469346a1211fcca}{%
+           family={Ben-Michael},
+           familyi={B\bibinithyphendelim M\bibinitperiod},
+           given={Eli},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd01724f6ff8de6f73c9c78729610ea7}{%
+           family={Feller},
+           familyi={F\bibinitperiod},
+           given={Avi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19192fe53caa301de3ea1ecacca56af9}{%
+           family={Rothstein},
+           familyi={R\bibinitperiod},
+           given={Jesse},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{1e903f837205268bea2760a7f89809a4}
+      \strng{fullhash}{1e903f837205268bea2760a7f89809a4}
+      \strng{bibnamehash}{1e903f837205268bea2760a7f89809a4}
+      \strng{authorbibnamehash}{1e903f837205268bea2760a7f89809a4}
+      \strng{authornamehash}{1e903f837205268bea2760a7f89809a4}
+      \strng{authorfullhash}{1e903f837205268bea2760a7f89809a4}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{536}
+      \field{title}{{The Augmented Synthetic Control Method}}
+      \field{volume}{116}
+      \field{year}{2021}
+      \field{pages}{1789\bibrangedash 1803}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/01621459.2021.1929245
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/01621459.2021.1929245
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/01621459.2021.1929245
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/01621459.2021.1929245
+      \endverb
     \endentry
     \entry{Callaway2021}{article}{}
       \name{author}{2}{}{%
@@ -493,6 +625,41 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
+    \entry{Abadie2005}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=da499bff747c5f6cd0ec9185c820ba4d}{%
+           family={Abadie},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{fullhash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{bibnamehash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{authorbibnamehash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{authornamehash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \strng{authorfullhash}{da499bff747c5f6cd0ec9185c820ba4d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0034-6527}
+      \field{journaltitle}{The Review of Economic Studies}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{{Semiparametric Difference-in-Differences Estimators}}
+      \field{volume}{72}
+      \field{year}{2005}
+      \field{pages}{1\bibrangedash 19}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1111/0034-6527.00321
+      \endverb
+    \endentry
     \entry{Abadie2010}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=da499bff747c5f6cd0ec9185c820ba4d}{%
@@ -580,6 +747,103 @@
       \verb https://EconPapers.repec.org/RePEc:pup:pbooks:8769
       \endverb
       \keyw{economics; toolkit; econometric; linear; regression; statistics; variables; methods; analysis; natural; experiment; differences; policy; technique; tools; data; discontinuity; quantile; standard; error; social; science; research; design; resource}
+    \endentry
+    \entry{Bai2009}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0dc94d98f7e1729d400a45f4d532e4a4}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Jushan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{fullhash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{bibnamehash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{authorbibnamehash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{authornamehash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \strng{authorfullhash}{0dc94d98f7e1729d400a45f4d532e4a4}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{4}
+      \field{title}{{Panel Data Models With Interactive Fixed Effects}}
+      \field{volume}{77}
+      \field{year}{2009}
+      \field{pages}{1229\bibrangedash 1279}
+      \range{pages}{51}
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.3982/ECTA6135
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA6135
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA6135
+      \endverb
+      \keyw{Additive effects,interactive effects,factor error structure,bias-corrected estimator,Hausman tests,time-invariant regressors,common regressors}
+    \endentry
+    \entry{BenMichael2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=299b529dff40b83e1469346a1211fcca}{%
+           family={Ben-Michael},
+           familyi={B\bibinithyphendelim M\bibinitperiod},
+           given={Eli},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd01724f6ff8de6f73c9c78729610ea7}{%
+           family={Feller},
+           familyi={F\bibinitperiod},
+           given={Avi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19192fe53caa301de3ea1ecacca56af9}{%
+           family={Rothstein},
+           familyi={R\bibinitperiod},
+           given={Jesse},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{1e903f837205268bea2760a7f89809a4}
+      \strng{fullhash}{1e903f837205268bea2760a7f89809a4}
+      \strng{bibnamehash}{1e903f837205268bea2760a7f89809a4}
+      \strng{authorbibnamehash}{1e903f837205268bea2760a7f89809a4}
+      \strng{authornamehash}{1e903f837205268bea2760a7f89809a4}
+      \strng{authorfullhash}{1e903f837205268bea2760a7f89809a4}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{536}
+      \field{title}{{The Augmented Synthetic Control Method}}
+      \field{volume}{116}
+      \field{year}{2021}
+      \field{pages}{1789\bibrangedash 1803}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/01621459.2021.1929245
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/01621459.2021.1929245
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/01621459.2021.1929245
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/01621459.2021.1929245
+      \endverb
     \endentry
     \entry{Callaway2021}{article}{}
       \name{author}{2}{}{%

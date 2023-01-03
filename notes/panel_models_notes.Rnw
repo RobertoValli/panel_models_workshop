@@ -25,7 +25,7 @@
 %\usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{threeparttable}
-%\usepackage{rotating}
+\usepackage{rotating}
 \usepackage{caption} 
 \usepackage{subcaption}
 %\captionsetup[table]{skip=10pt}
@@ -82,7 +82,7 @@ However, since only one of the two terms is ever observed in reality, statistica
 
 Let's consider the classic two-period DiD setup and how it can be thought of as a prediction exercise. The outcome is assumed to be a continuous variable $Y_{it}$ observed over two periods $t=1, 2$, whereas the treatment is assumed to be a dichotomous variable $D_{it} = 0, 1$. The observed value of the outcome can be expressed as:
 $$ Y_{it} = Y_{it}(1)D_{it} + Y_{it}(0)D_{it} $$
-The major contribution of the classic DiD literature \parencite[e.g.,]{Angrist2009} is to demonstrate that under SUTVA\footnote{The \textit{stable unit treatment value assumption} is a set of assumptions such that: i) units composition does not change over time, ii) no treatment heterogeneity exists, iii) no treatment spillovers take place.} assumptions the average treatment effect on the treated (ATT) can be defined as
+The major contribution of the classic DiD literature \parencite[e.g.,][]{Angrist2009} is to demonstrate that under SUTVA\footnote{The \textit{stable unit treatment value assumption} is a set of assumptions such that: i) units composition does not change over time, ii) no treatment heterogeneity exists, iii) no treatment spillovers take place.} assumptions the average treatment effect on the treated (ATT) can be defined as
 $$ \tau = E(Y_{it} (1) - Y_{it}(0) | D_{it} = 1) $$
 
 Under the additional assumption of so-called parallel trends, meaning that the individual \textit{change} in outcome under control between $t = 1, t= 2$ is independent of treatment status, i.e.
@@ -145,15 +145,16 @@ Let's turn to a very applied guide to the right modelling choice depending on on
 The first modelling choice is dictated by whether a scholar is interested in the effect of an intervention that treated one (or few) aggregate unit. In this case, the standard synthetic control method (SCM) allows to model the counterfactual outcome of the treated unit flexibly and with extensive diagnostic tools. The idea behind the SCM is to build a model of $Y_{it}(0)\ | \ D=1$ from a pool of untreated units (the ``donor pool''). The model is tuned on the pre-treatment period, and then used to predict the treated units' outcomes under no-treatment status.
 
 The data requirements for ATT estimates with the SCM are i) a sufficiently long pre-treatment period to fit the synthetic control observation, ii) a sufficiently large donor pool of comparable units, iii) the treated unit's outcomes must be within the control units' common support, i.e. the treated unit cannot have outcomes more extreme than the control group. Additionally, SUTVA assumptions hold, which can be hard to assess especially when it comes to the absence of spillovers.
+Note that a recent development of SCM by \textcite{BenMichael2021} suggests that by fitting a regularized outcome model it is possible to make valid predictions of counterfactual outcomes even when the treated unit is outside of the donors' common support.
 
-There are currently two R packages for SCM analyses: \texttt{tidysynth}, \texttt{Synth}.
+There are currently two R packages for SCM analyses and one for \citeauthor{BenMichael2021}'s ``augmented'' SCM: \texttt{tidysynth}, \texttt{Synth}, \texttt{augsynth}.
 
 
 \begin{figure}
 \small
 \caption{Heuristic tree of CSTS methods.}
     \Tree[. [.{N. treated units > 1} [.{T = 2} {Classic DiD\\ (Sec. 4.2)} ]
-                           [.{T > 2} [.{Non-absorbing state\\ treatment} {\texttt{PanelMatch}\\ \texttt{fect}\\ \texttt{GSC}} ]
+                           [.{T > 2} [.{Non-absorbing state\\ treatment} { {\texttt{GSC} (Sec. 4.43)}\\ {\texttt{fect} (Sec. 4.42)}\\ {\texttt{PanelMatch} (Sec. 4.43)} } ]
                                      [.{Absorbing-state\\ treatment} [.{Heterogeneity, spillovers,\\ staggered adoption} ]
                                                                       [.{Classic DiD with multiple\\ periods (Sec 4.3)} ]]]]
             [.{N. treated units = 1} [.{SCM\\ (Sec. 4.1)} ]]
@@ -178,7 +179,7 @@ library(tidyverse)
 dat_did <- fixest::base_did %>% 
     filter(period %in% c(5, 6))
 
-# Create first-difference of treatement and outcome
+# Create first-difference of treatment and outcome
 dat_did <- dat_did %>% 
     mutate(post_treat = post*treat) %>% 
     group_by(id) %>% 
@@ -216,10 +217,17 @@ mod_twfe$coefficients
 In settings where the scholar observes the units over multiple periods it is important to separate the cases of absorbing state-treatments, i.e. those in which treated units remain treated after exposure, and those that do not. Next, I discuss the simplest case and the one covered by much of the econometric literature on DiD, that is absorbing-state treatment settings.
 
 In this family of settings, the first distinction to be made concerns whether the scholar believes that the basic DiD assumptions (no effect heterogeneity, synchronous treatment, parallel trends, no anticipation) hold in a specific case. If these all hold, and the units are only observed for few extra periods before and after treatment, then in principle the TWFE approach returns the unbiased ATT. However, some of the assumptions are impossible to test and therefore it is worth running tests and alternative estimations that are robust to violations of the basic DiD setup.
+In particular, multi-period DiD settings are more prone to violation of the assumptions of constant treatment effects and of no carryover effect \parencite[i.e. past treatments affect current outcomes][]{Liu}.
 
 \subsubsection{Failure of Parallel Trends Assumption}
 
-The parallel trend assumption is impossible to demonstrate, and even common pre-trend tests fail to really rule out the existence of differential selection bias. However, when scholars believe that potential outcomes of treated and control observations really follow parallel trends conditional on some covariates there are ways to estimate consistent and efficient ATTs. Based on the methods suggested by \textcite{SantAnna2020}, the \texttt{DRDID} package allows to fit DiD estimators that return correct ATTs conditional on the correct covariate specifications.
+The parallel trend assumption is impossible to demonstrate, and even common pre-trend tests fail to really rule out the existence of differential selection bias \parencite{Roth2022}. A typical correction used by applied scholars who suspect a violation of the parallel trends assumption is to run an additional set of TWFE models with linear or quadratic time trends (i.e. interacting unit fixed effects with years and years squared). Another solution is to add a set of time-varying covariates to TWFE regressions hoping to control away the selection bias. The problem with both of these approaches is that they may fail if scholars misspecify the functional form of the time trends or covariate set.
+
+However, currently there are various proposed solutions to this problem, which might be more or less appropriated depending on the specific application. 
+One reason for the violation of the parallel trend assumption might be that the control group is too heterogeneous and hence make inappropriate comparisons. In this case, \textcite{Abadie2005,Imai2021} suggest to match units on their pre-treatment covariates to reduce heterogeneity and make the parallel trends more credible.
+Another case that might undermine parallel trends is the staggered treatment adoption, whereby TWFE mechanically produce unwanted comparisons. The solutions to this problem are described below.
+
+Finally, it might be the case that potential outcomes of treated and control observations really follow parallel trends, but only conditional on some covariates. In such cases \textcite{SantAnna2020} propose ways to estimate consistent and efficient ATTs conditional on the correct covariate specifications by reweighting units based on the propensity score. The method is implemented in the \texttt{DRDID} package.
 
 \subsubsection{Staggered Adoption}
 
@@ -229,7 +237,51 @@ The parallel trend assumption is impossible to demonstrate, and even common pre-
 
 For settings that go beyond the typical policy implementation where a set of treated units receives an absorbing state treatment, methodologists have developed different approaches to extend the DiD logic of counterfactual estimation while allowing for more complicated data structures. In this section I discuss three methods: The generalized synthetic control \parencite[GSCM]{Xu2017}, the PanelMatch \parencite{Imai2021, Kim2021}, and the fect \parencite{Liu} counterfactual methods.
 
+All three methods allow treatments to last for a certain period and be reversed, and offer generally more flexible predictions of counterfactuals than standard linear DiD methods. Moreover, they all have great R implementation and useful diagnostic tools.
 
+\subsubsection{The Generalized Synthetic Control Method}
+
+\textcite{Xu2017} introduces a flexible approach to estimating causal effects with CSTS data that can be thought of as a generalization of the synthetic control method, but takes inspiration from the literature on interactive fixed effects \parencite{Bai2009} and applies them to DiD settings. The GSCM computes counterfactual outcomes for the treated group by first fitting a linear model with fixed effects for time and unit interactions on the control group, then estimating unit-specific intercepts using the pre-treatment outcomes of the treated group, and finally combines the to data to predict the control outcomes for the treated units in the post-treatment period. Then the ATT is estimated as the mean difference between observed and imputed counterfactuals.
+
+In order to make valid estimates the method needs the following assumptions: i) Strict exogeneity of one unit's error term to other units $E\left[ \varepsilon_{it}\ | \ D_{ij},x_{ij},\gamma_{ij}, f_{ij}\right] = E\left[ \varepsilon_{it}\ | \gamma_{ij}, f_{ij}\right] = 0$, ii) serial independence of one unit from other units. Moreover, the GSCM requires scholars to observe at least 10 pre-treatment periods and a minimum of 40 control units. The method is implemented through the \texttt{gsynth} R package.
+
+\subsubsection{The \texttt{fect} Method}
+
+\textcite{Liu} propose what can be seen as a development of GSCM because it covers a set of estimators of ATTs that fit predictive models of counterfactual outcomes on the control population. Similarly to GSCM, scholars can use one of three methods to fit models of the control group's outcomes (linear fixed effects, interactive fixed effects, and matrix completion), then use these models to infer the counterfactual outcomes under control for the treated group. 
+
+The advantages of fect over other methods include the relaxation of the strict exogeneity assumption at least for IFE and MC estimators, which are both robust to the existence of potential time-varying confounders are captured with latent factors, and the large set of diagnostic tools that allow to test for the existence of anticipation, carryover effects, and pre-trends.
+
+The biggest single drawback of the method is probably the novelty of most of the estimators included in the R package \texttt{fect}, which might not be received enthusiastically by most political scientists.
+
+
+\subsubsection{The Panel Matching Method}
+
+\textcite{Imai2021} develop a CSTS method that improves on existing DiD estimators by drawing on matching methods for causal inference. PanelMatch tries to solve the known problems of TWFE estimation of ATTs with a three-step procedure: 1) Scholars match treated and control units for a set of time-varying covariates as well as the outcome over a certain number of periods, 2) each treated unit's counterfactual outcome $l$ periods since treatment is estimated nonparametrically as the outcome at $l-1$ net of the average change in outcome in its matched set at the same period, 3) the period-specific ATT is computed as the average difference between observed and counterfactual outcomes for a given period since treatment, and similarly the overall ATT is the average of period-specific ATTs.
+
+The advantages of PanelMatch are its intuitive selection of control observations, its robustness to model misspecification, the ability of using different matching and weighting procedures (Mahalanobis, propensity score, covariate-balancing propensity score), the ability to assess the matching quality before seeing effect estimates (potentially less selection bias in the model choice), and finally the fully flexible non-parametric imputation of counterfactual outcomes.
+
+However, these advantages come at significant costs. First, PanelMatch requires the most demanding version of the parallel trends assumption, known as the ``sequential ignorability assumption,'' implying that treatment assignment at a given time must be independent from outcome, covariate and treatment histories in all previous periods. Second, because samples are explicitly restricted through the matching procedure, the estimator throws out quite some data and is therefore less efficient than alternative estimators (i.e. estimates are less precise and standard errors wider).
+
+
+\section{Recap and Overview Table}
+
+
+\begin{sidewaystable}
+    \centering\footnotesize
+    \begin{tabular}{lccccccccc}
+	\toprule
+	Method & Treated $N$ & Staggered & Exogeneity & Heterogeneity rob. & Treatment & Functional form & Controls & Autocorr./spillovers & Data needs \\
+	\midrule
+	TWFE & $N >= 1$ & No & Strict & No & Absorbing &  &  &  &  \\	
+	SCM & $N = 1$ & -- & Relaxed & Yes & Absorbing &  &  &  &  \\	
+	GSCM & $N >= 10$ & Yes & Relaxed & Yes & Non-Absorbing &  &  &  &  \\	
+	fect & $N >= 1$ & Yes & Relaxed & Yes & Non-Absorbing &  &  &  &  \\	
+	PanelMatch & $N >= 1$ & Yes & Rep. ignorability & Yes & Non-Absorbing &  &  &  &  \\	
+	Two-stage DiD & $N >= 1$ & Yes & Strict & Absorbing &  &  &  &  &  \\	
+	&  &  &  &  &  &  &  &  &  \\
+	\bottomrule
+    \end{tabular}
+\end{sidewaystable}
 
 \printbibliography
 

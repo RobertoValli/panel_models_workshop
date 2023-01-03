@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  3 JAN 2023 09:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  3 JAN 2023 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -695,6 +695,14 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 rttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box77
+) (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.st
+y
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count429
+\rotFPtop=\skip149
+\rotFPbot=\skip150
+\rot@float@box=\box78
+\rot@mess@toks=\toks29
 ) (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
@@ -709,14 +717,15 @@ Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@hangindent=\dimen191
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count429
-\c@continuedfloat=\count430
+\c@caption@flags=\count430
+\c@continuedfloat=\count431
+Package caption Info: rotating package is loaded.
 Package caption Info: threeparttable package is loaded.
 )
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-\c@subfigure=\count431
-\c@subtable=\count432
+\c@subfigure=\count432
+\c@subtable=\count433
 ) (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.st
 y
 Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
@@ -741,11 +750,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ng.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count433
+\c@section@level=\count434
 )
 \@linkdim=\dimen192
-\Hy@linkcounter=\count434
-\Hy@pagecounter=\count435
+\Hy@linkcounter=\count435
+\Hy@pagecounter=\count436
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -755,7 +764,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (C:\Users\vallir\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count436
+\Hy@SavedSpaceFactor=\count437
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -769,7 +778,7 @@ Package hyperref Info: Plain pages OFF on input line 4177.
 Package hyperref Info: Backreferencing OFF on input line 4182.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4408.
-\c@Hy@tempcnt=\count437
+\c@Hy@tempcnt=\count438
 LaTeX Info: Redefining \url on input line 4746.
 \XeTeXLinkMargin=\dimen193
 (C:\Users\vallir\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
@@ -778,7 +787,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count438
+\Fld@menulength=\count439
 \Field@Width=\dimen194
 \Fld@charsize=\dimen195
 Package hyperref Info: Hyper figures OFF on input line 6024.
@@ -792,9 +801,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6054.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count439
-\c@Item=\count440
-\c@Hfootnote=\count441
+\Hy@abspage=\count440
+\c@Item=\count441
+\c@Hfootnote=\count442
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -805,8 +814,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count442
-\c@bookmark@seq@number=\count443
+\Fld@listcount=\count443
+\c@bookmark@seq@number=\count444
 
 (C:\Users\vallir\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck
 .sty
@@ -819,7 +828,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip149
+\Hy@SectionHShift=\skip151
 )
 Package color Info: Redefining color shadecolor on input line 109.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
@@ -866,17 +875,17 @@ LaTeX Font Info:    ... okay on input line 117.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count444
+\scratchcounter=\count445
 \scratchdimen=\dimen196
-\scratchbox=\box78
-\nofMPsegments=\count445
-\nofMParguments=\count446
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count447
+\scratchbox=\box79
+\nofMPsegments=\count446
+\nofMParguments=\count447
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count448
 \MPscratchDim=\dimen197
-\MPnumerator=\count448
-\makeMPintoPDFobject=\count449
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count449
+\makeMPintoPDFobject=\count450
+\everyMPtoPDFconversion=\toks31
 )
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
 base.sty
@@ -1027,35 +1036,41 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 137.
 [3] [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 214.
+(Font)              <9> on input line 215.
+
+Overfull \hbox (5.22617pt too wide) in paragraph at lines 215--221
+[] [] 
+ []
+
 [6]
-Package color Info: Redefining color shadecolor on input line 231.
+Package color Info: Redefining color shadecolor on input line 232.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 234.
-[7] [8] [9] (panel_models_notes.aux)
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 235.
+[7] [8] [9] [10] [11] [12] (panel_models_notes.aux)
 Package rerunfilecheck Info: File `panel_models_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 116F15228E6E38FC83DD2B2229F490F2;3740.
+(rerunfilecheck)             Checksum: 4F465817D5720F187CF79D9AAA561F9B;4544.
 Package logreq Info: Writing requests to 'panel_models_notes.run.xml'.
 \openout1 = `panel_models_notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22296 strings out of 478032
- 398617 string characters out of 2827995
- 1211829 words of memory out of 3000000
- 40662 multiletter control sequences out of 15000+600000
+ 22422 strings out of 478032
+ 401162 string characters out of 2827995
+ 1214121 words of memory out of 3000000
+ 40774 multiletter control sequences out of 15000+600000
  553483 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,11n,70p,1479b,5043s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{
-C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/
-Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:
-/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C
+{C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
+C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}
+{C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:
+/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C
 :/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/
 Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:
 /Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C
 :/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><
+C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><
@@ -1072,9 +1087,9 @@ C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
 <C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
 <C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pf
 b>
-Output written on panel_models_notes.pdf (9 pages, 466814 bytes).
+Output written on panel_models_notes.pdf (12 pages, 492666 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
