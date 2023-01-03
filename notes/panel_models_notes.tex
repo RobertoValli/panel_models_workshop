@@ -65,14 +65,14 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}    
 \usepackage{csquotes}
-\usepackage[style=apa, backend=biber, maxcitenames=3]{biblatex}
+\usepackage[style=apa, maxcitenames=3]{biblatex}
 
 
 \DeclareLanguageMapping{american}{american-apa}
 
 \AtEveryBibitem{\clearfield{labelmonth}}
 
-\addbibresource{refs_workshop}
+\addbibresource{../refs_workshop}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -105,7 +105,13 @@
 	 \textit{Workshop Notes}
 }
 
-
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
 
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
@@ -118,7 +124,7 @@ Political science is often characterized by research questions that cannot be st
 
 The goal of these notes in to tie together a recent literature that highlights the limitations of standard difference-in-differences methods (DiD) when it comes to estimating causal effects in complex settings that violate its basic assumptions. The interesting thing about this literature is that not only it develops extremely fast, but it accompanies a harsh critique of common modelling choices to many solutions, practical advice, and R packages to implement more suitable models. However, the fast-moving and technical nature of the literature can be confusing. This is why I wrote these notes, to guide applied researchers to the right references and modelling choices without having to first read everything under the sun.
 
-Note that this document is meant to be a practical guide for advanced researchers with prior knowledge of statistics, basic causal inference designs and programming in \texttt{R}. It is by no means a technical paper, nor an introduction to any of these subjects.
+Note that this document is meant to be a practical guide for advanced researchers with prior knowledge of statistics, basic causal inference designs and programming in \texttt{R}. It is by no means a technical paper, nor an introduction to any of these subjects. Also, the focus of this paper is on the different methods used to statistically estimate average treatment effects and not on the related ways to compute uncertainty measures. Applied scholars need to learn on these through the original methods papers and the related R package documentation. Moreover, this note does not cover related topics, such as developments of DiD estimators that drop standard sampling assumptions for design-based inference and the literature on event study models.
 
 The notes proceed as follows. First, I give a brief overview of causal inference methods with cross-sectional time-series data (CSTS) and its limitations. I start from the standard DiD model and its estimators, and walk through its critique in the literature. Second, I present a heuristic decision model to select the right CSTS method based on one's data. Third, I provide a description of various methods, their assumptions and implementation in \texttt{R}.
 
@@ -167,15 +173,16 @@ The simplest violation of the basic DiD setup emerges when units are observed fo
 \subsection{Treatment Timing}
 
 % staggered adoption
-The most significant result in the recent literature on CSTS estimators, and probably the one that contributed the most to its quick development, is the demonstration that the TWFE estimator is a biased estimator of $\tau$ in the common setting of \textit{staggered treatment adoption}. Whenever treated units are not exposed to treatment at the same point in time, but rather adopt treatment in several cohorts, the TWFE estimate of $\hat{\tau}$ is biased towards zero \parencite{GoodmanBacon2021, Callaway2021}. Researchers demonstrated that TWFE estimates are a weighted average of DiD estimates comparing all pairs of periods. The major issue is that some comparisons are undesirable, meaning that they use already-treated cohorts as counterfactual for other treated units. A second problem is that some of the cohort-effects' weights are negative, which creates problem with the interpretation of the aggregate estimate of $\hat{\tau}$. 
+The most significant result in the recent literature on CSTS estimators, and probably the one that contributed the most to its quick development, is the demonstration that the TWFE estimator is a biased estimator of $\tau$ in the common setting of \textit{staggered treatment adoption}. Whenever treated units are not exposed to treatment at the same point in time, but rather adopt treatment in several cohorts, the TWFE estimate of $\hat{\tau}$ is biased towards zero \parencite{GoodmanBacon2021, Callaway2021}. Researchers demonstrated that TWFE estimates are a weighted average of DiD estimates comparing all pairs of treatment statuses and cohorts. The major issue is that some comparisons are undesirable, meaning that they use already-treated cohorts as counterfactual for other treated units. A second problem is that some of the cohort-effects' weights are negative, which creates problem with the interpretation of the aggregate estimate of $\hat{\tau}$. 
 
 There are various solutions to the weighting and comparison problems, which are solved either by setting constraints on group weights, or by explicitly selecting the control group before estimation. The available options are explained below.
 
 \subsection{Violations of Parallel Trends}
 
 % non-parallel trends
-The assumption of parallel trends is hard to motivate, and impossible to prove. There are common tests for the existence of pre-treatment trends, like the common event study plots where the outcome is regressed onto lags and leads of the treatment. However, recent studies demonstrated that these tests are underpowered when it comes to rejecting the presence of pre-trends.
+The assumption of parallel trends is hard to motivate, and impossible to prove. There are common tests for the existence of pre-treatment trends, like the common event study plots where the outcome is regressed onto lags and leads of the treatment. However, recent studies demonstrated that these tests are underpowered when it comes to rejecting the presence of pre-trends. In fact, there is a growing literature just on this issue, but I won't go into it in this note.
 
+That said, scholars proposed ways to estimate consistent ATTs when parallel trends are valid conditional on a set of covariates \parencite{Sant'Anna2020}. The authors proposed a family of estimators that have desirable properties when either the outcome model or the covariate set are correctly specified.
 
 % effect heterogeneity
 
@@ -187,13 +194,22 @@ A treatment is referred to as being in an absorbing state whenever units that ar
 % continuous treatment
 Finally, one might wonder how DiD designs might be extended to continuous treatment settings. While \textcite{Angrist2009} suggest that the type of treatment does not influence the estimand or estimation quantity, \textcite{Callaway2021} demonstrate that continuous treatments make settings with staggered adoption and non-heterogeneous effects extremely hard to handle, as well as deserving a complicated notation. In short, there does not seem to be a set of simple tools and guidelines to be employed in DiDs with continuous outcomes.
 
+
 \section{Which CSTS Model is Right for You?}
 
-Let's turn to a very applied guide to the right modelling choice depending on one's variation of interest.
-The first choice is between a
+Let's turn to a very applied guide to the right modelling choice depending on one's variation of interest. Note that this typology is strictly limited to binary treatment settings.
+
+\subsection{Number of Treated Units and the Synthetic Control Method}
+
+The first modelling choice is dictated by whether a scholar is interested in the effect of an intervention that treated one (or few) aggregate unit. In this case, the standard synthetic control method (SCM) allows to model the counterfactual outcome of the treated unit flexibly and with extensive diagnostic tools. The idea behind the SCM is to build a model of $Y_{it}(0)\ | \ D=1$ from a pool of untreated units (the ``donor pool''). The model is tuned on the pre-treatment period, and then used to predict the treated units' outcomes under no-treatment status.
+
+The data requirements for ATT estimates with the SCM are i) a sufficiently long pre-treatment period to fit the synthetic control observation, ii) a sufficiently large donor pool of comparable units, iii) the treated unit's outcomes must be within the control units' common support, i.e. the treated unit cannot have outcomes more extreme than the control group. Additionally, SUTVA assumptions hold, which can be hard to assess especially when it comes to the absence of spillovers.
+
+There are currently two R packages for SCM analyses: \texttt{tidysynth}, \texttt{Synth}.
 
 
 \begin{figure}
+\small
 \caption{Heuristic tree of CSTS methods.}
     \Tree[. [.{N. treated units > 1} [.{T = 2} {Classic DiD} ]
                            [.{T > 2} [.{Non-absorbing state\\ treatment} {\texttt{PanelMatch}\\ \texttt{fect}\\ \texttt{GSC}} ]
@@ -202,6 +218,101 @@ The first choice is between a
             [.{N. treated units = 1} [.{Synthetic control\\ method} ]]
           ]
 \end{figure}
+
+
+\subsection{Number of Treatment Periods and the Classic DiD Setup}
+
+Whenever there are only two periods and treated units are only treated in the second period, scholars are sure to find themselves in the ``classic DiD'' setting.
+This means that there are three equivalent ways to estimate the ATT: The non-parametric difference in means, the first-difference OLS and the TWFE model. These can be all estimated with base R tools and packages for linear regressions.
+
+The three models are statistically equivalent for the estimation of ATT because the predicted outcome of the treated under control can only be predicted linearly as the pre-treatment outcome of the treated plus the trend of the control. The R code below demonstrates it with help of example data.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# Load packages}
+\hlkwd{library}\hlstd{(fixest)}
+\hlkwd{library}\hlstd{(tidyverse)}
+
+\hlcom{# Filter example data (from fixest package) to only 2 periods}
+\hlstd{dat_did} \hlkwb{<-} \hlstd{fixest}\hlopt{::}\hlstd{base_did} \hlopt{%>%}
+    \hlkwd{filter}\hlstd{(period} \hlopt{%in%} \hlkwd{c}\hlstd{(}\hlnum{5}\hlstd{,} \hlnum{6}\hlstd{))}
+
+\hlcom{# Create first-difference of treatement and outcome}
+\hlstd{dat_did} \hlkwb{<-} \hlstd{dat_did} \hlopt{%>%}
+    \hlkwd{mutate}\hlstd{(}\hlkwc{post_treat} \hlstd{= post}\hlopt{*}\hlstd{treat)} \hlopt{%>%}
+    \hlkwd{group_by}\hlstd{(id)} \hlopt{%>%}
+    \hlkwd{mutate}\hlstd{(}\hlkwc{y_diff} \hlstd{= y} \hlopt{-} \hlkwd{lag}\hlstd{(y),}
+           \hlkwc{x_diff} \hlstd{= post_treat} \hlopt{-} \hlkwd{lag}\hlstd{(post_treat))}
+
+\hlcom{# N. unit }
+\hlkwd{length}\hlstd{(}\hlkwd{unique}\hlstd{(dat_did}\hlopt{$}\hlstd{id))}
+\end{alltt}
+\begin{verbatim}
+## [1] 108
+\end{verbatim}
+\begin{alltt}
+\hlcom{# N. treated units}
+\hlkwd{length}\hlstd{(}\hlkwd{unique}\hlstd{(dat_did}\hlopt{$}\hlstd{id[dat_did}\hlopt{$}\hlstd{treat} \hlopt{==} \hlnum{1}\hlstd{]))}
+\end{alltt}
+\begin{verbatim}
+## [1] 55
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Compute non-parametric DiD}
+\hlstd{tau_nonp} \hlkwb{<-} \hlkwd{mean}\hlstd{(dat_did}\hlopt{$}\hlstd{y[dat_did}\hlopt{$}\hlstd{period} \hlopt{==} \hlnum{6} \hlopt{&} \hlstd{dat_did}\hlopt{$}\hlstd{treat} \hlopt{==} \hlnum{1}\hlstd{])} \hlopt{-}
+    \hlkwd{mean}\hlstd{(dat_did}\hlopt{$}\hlstd{y[dat_did}\hlopt{$}\hlstd{period} \hlopt{==} \hlnum{5} \hlopt{&} \hlstd{dat_did}\hlopt{$}\hlstd{treat} \hlopt{==} \hlnum{1}\hlstd{])} \hlopt{-}
+    \hlstd{(}\hlkwd{mean}\hlstd{(dat_did}\hlopt{$}\hlstd{y[dat_did}\hlopt{$}\hlstd{period} \hlopt{==} \hlnum{6} \hlopt{&} \hlstd{dat_did}\hlopt{$}\hlstd{treat} \hlopt{==} \hlnum{0}\hlstd{])} \hlopt{-}
+    \hlkwd{mean}\hlstd{(dat_did}\hlopt{$}\hlstd{y[dat_did}\hlopt{$}\hlstd{period} \hlopt{==} \hlnum{5} \hlopt{&} \hlstd{dat_did}\hlopt{$}\hlstd{treat} \hlopt{==} \hlnum{0}\hlstd{]))}
+
+\hlcom{# Fit first-difference model}
+\hlstd{mod_first} \hlkwb{<-} \hlkwd{feols}\hlstd{(y_diff} \hlopt{~} \hlstd{x_diff,} \hlkwc{data} \hlstd{= dat_did)}
+
+\hlcom{# Fit TWFE model}
+\hlstd{mod_twfe} \hlkwb{<-} \hlkwd{feols}\hlstd{(y} \hlopt{~} \hlstd{post_treat} \hlopt{|} \hlstd{id} \hlopt{+} \hlstd{period,} \hlkwc{data} \hlstd{= dat_did)}
+
+\hlcom{# Compare estimated ATT}
+\hlstd{tau_nonp}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.159133
+\end{verbatim}
+\begin{alltt}
+\hlstd{mod_first}\hlopt{$}\hlstd{coefficients}
+\end{alltt}
+\begin{verbatim}
+## (Intercept)      x_diff 
+##    1.173937    1.159133
+\end{verbatim}
+\begin{alltt}
+\hlstd{mod_twfe}\hlopt{$}\hlstd{coefficients}
+\end{alltt}
+\begin{verbatim}
+## post_treat 
+##   1.159133
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+\subsection{Absorbing-state Treatments and Their Different Flavors}
+
+In settings where the scholar observes the units over multiple periods it is important to separate the cases of absorbing state-treatments, i.e. those in which treated units remain treated after exposure, and those that do not. Next, I discuss the simplest case and the one covered by much of the econometric literature on DiD, that is absorbing-state treatment settings.
+
+In this family of settings, the first distinction to be made concerns whether the scholar believes that the basic DiD assumptions (no effect heterogeneity, synchronous treatment, parallel trends, no anticipation) hold in a specific case. If these all hold, and the units are only observed for few extra periods before and after treatment, then in principle the TWFE approach returns the unbiased ATT. However, some of the assumptions are impossible to test and therefore it is worth running tests and alternative estimations that are robust to violations of the basic DiD setup.
+
+\subsubsection{Failure of Parallel Trends Assumption}
+
+The parallel trend assumption is impossible to demonstrate, and even common pre-trend tests fail to really rule out the existence of biased. However, when scholars believe that potential outcomes of treated and control observations really follow parallel trends conditional on some covariates there are ways to estimate consistent and efficient ATTs. Based on the methods suggested by \textcite{Sant'Anna2020}, the \texttt{DRDID} package allows to fit DiD estimators that return correct ATTs conditional on the correct covariate specifications.
+
+\subsubsection{Staggered Adoption}
+
+
+
+\subsection{Non-Absorbing Treatments and Their Estimators}
+
+For settings that go beyond the typical policy implementation where a set of treated units receives an absorbing state treatment, methodologists have developed
+
 
 
 \printbibliography

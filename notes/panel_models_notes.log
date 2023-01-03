@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  23 DEC 2022 14:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  3 JAN 2023 08:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,6 +820,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip149
+)
+Package color Info: Redefining color shadecolor on input line 109.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+0.
+(C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+10.
+(C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -830,31 +841,27 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-1.
-(C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (panel_models_notes.aux)
+(panel_models_notes.aux)
 \openout1 = `panel_models_notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
 
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
@@ -921,8 +928,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'panel_models_notes.bbl' found.
 (panel_models_notes.bbl)
-Package biblatex Info: Reference section=0 on input line 111.
-Package biblatex Info: Reference segment=0 on input line 111.
+Package biblatex Info: Reference section=0 on input line 117.
+Package biblatex Info: Reference segment=0 on input line 117.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -960,124 +967,138 @@ Package biblatex Info: Reference segment=0 on input line 111.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 111.
+Package hyperref Info: Link coloring OFF on input line 117.
 (panel_models_notes.out) (panel_models_notes.out)
 \@outlinefile=\write4
 \openout4 = `panel_models_notes.out'.
 
+[1
+
+{C:/Users/vallir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-14.
+20.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-14.
+20.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-114.
+120.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-114.
+120.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 114.
+(Font)              <17.28> on input line 120.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 114.
+(Font)              <12> on input line 120.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 114.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 114
+(Font)              <10> on input line 120.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 120
 .
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 114
+LaTeX Font Info:    Trying to load font information for U+msb on input line 120
 .
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-14.
+20.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 114.
+(Font)              <8> on input line 120.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 114.
+(Font)              <6> on input line 120.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 114.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-21.
-(C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [1
-
-{C:/Users/vallir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 131.
-
-LaTeX Warning: Citation 'Angrist2009' on page 2 undefined on input line 138.
-
-
-LaTeX Warning: Citation 'Abadie2010' on page 2 undefined on input line 152.
-
-
-LaTeX Warning: Citation 'Roth2022' on page 2 undefined on input line 152.
-
-
-LaTeX Warning: Citation '' on page 2 undefined on input line 152.
-
+(Font)              <5> on input line 120.
 [2]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 137.
 
-LaTeX Warning: Citation 'Card1990' on page 3 undefined on input line 154.
-
-
-LaTeX Warning: Citation '' on page 3 undefined on input line 154.
-
-
-LaTeX Warning: Citation 'Angrist2009' on page 3 undefined on input line 154.
-
-
-LaTeX Warning: Citation 'Angrist2009' on page 3 undefined on input line 165.
-
-
-LaTeX Warning: Citation '' on page 3 undefined on input line 165.
-
-
-LaTeX Warning: Citation 'GoodmanBacon2021' on page 3 undefined on input line 17
-0.
-
-
-LaTeX Warning: Citation 'Callaway2021' on page 3 undefined on input line 170.
+LaTeX Warning: Citation 'Angrist2009' on page 3 undefined on input line 144.
 
 [3]
 
-LaTeX Warning: Citation 'Angrist2009' on page 4 undefined on input line 188.
+LaTeX Warning: Citation 'Abadie2010' on page 4 undefined on input line 158.
 
 
-LaTeX Warning: Citation '' on page 4 undefined on input line 188.
+LaTeX Warning: Citation 'Roth2022' on page 4 undefined on input line 158.
 
 
-LaTeX Warning: Citation 'Callaway2021' on page 4 undefined on input line 188.
+LaTeX Warning: Citation '' on page 4 undefined on input line 158.
 
 
-LaTeX Warning: Citation '' on page 4 undefined on input line 188.
+LaTeX Warning: Citation 'Card1990' on page 4 undefined on input line 160.
 
 
-LaTeX Warning: Empty bibliography on input line 207.
+LaTeX Warning: Citation '' on page 4 undefined on input line 160.
 
-[4] [5] (panel_models_notes.aux)
+
+LaTeX Warning: Citation 'Angrist2009' on page 4 undefined on input line 160.
+
+
+LaTeX Warning: Citation 'Angrist2009' on page 4 undefined on input line 171.
+
+
+LaTeX Warning: Citation '' on page 4 undefined on input line 171.
+
+
+LaTeX Warning: Citation 'GoodmanBacon2021' on page 4 undefined on input line 17
+6.
+
+
+LaTeX Warning: Citation 'Callaway2021' on page 4 undefined on input line 176.
+
+[4]
+
+LaTeX Warning: Citation 'Sant'Anna2020' on page 5 undefined on input line 185.
+
+
+LaTeX Warning: Citation 'Angrist2009' on page 5 undefined on input line 195.
+
+
+LaTeX Warning: Citation '' on page 5 undefined on input line 195.
+
+
+LaTeX Warning: Citation 'Callaway2021' on page 5 undefined on input line 195.
+
+
+LaTeX Warning: Citation '' on page 5 undefined on input line 195.
+
+[5]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 214.
+[6]
+Package color Info: Redefining color shadecolor on input line 231.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 234.
+[7]
+
+LaTeX Warning: Citation 'Sant'Anna2020' on page 8 undefined on input line 306.
+
+
+LaTeX Warning: Citation '' on page 8 undefined on input line 306.
+
+
+LaTeX Warning: Empty bibliography on input line 318.
+
+[8] (panel_models_notes.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `panel_models_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 937BD22F36C18E9C33B3987311A73D6B;1967.
+(rerunfilecheck)             Checksum: 116F15228E6E38FC83DD2B2229F490F2;3740.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                panel_models_notes
@@ -1088,13 +1109,13 @@ Package logreq Info: Writing requests to 'panel_models_notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22130 strings out of 478032
- 394330 string characters out of 2827995
- 1213972 words of memory out of 3000000
- 40525 multiletter control sequences out of 15000+600000
- 545516 words of font info for 83 fonts, out of 8000000 for 9000
+ 22162 strings out of 478032
+ 394744 string characters out of 2827995
+ 1213334 words of memory out of 3000000
+ 40541 multiletter control sequences out of 15000+600000
+ 553483 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,70p,1081b,5043s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,11n,70p,1104b,5043s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/
 Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:
@@ -1110,14 +1131,19 @@ C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C
 :/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:
 /Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/
-Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:
-/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C
-:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C
-:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><
+Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/U
+sers/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/
+Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:
+/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:
+/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
+:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on panel_models_notes.pdf (5 pages, 331505 bytes).
+<C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+<C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pf
+b>
+Output written on panel_models_notes.pdf (8 pages, 448664 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,9 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'panel_models_notes.blg'
+[167] biber-MSWIN64:340> INFO - === 
+[205] Biber.pm:418> INFO - Reading 'panel_models_notes.bcf'
+[392] Biber.pm:978> INFO - Found 7 citekeys in bib section 0
+[424] Biber.pm:4401> INFO - Processing section 0
+[438] Biber.pm:4592> INFO - Looking for bibtex file '../refs_workshop' for section 0
+[939] Utils.pm:410> ERROR - Cannot find '../refs_workshop'!
+[939] Biber.pm:135> INFO - ERRORS: 1

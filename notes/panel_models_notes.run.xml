@@ -83,7 +83,7 @@
       <file>panel_models_notes.bcf</file>
     </requires>
     <requires type="editable">
-      <file>refs_workshop</file>
+      <file>../refs_workshop</file>
     </requires>
   </external>
 </requests>
