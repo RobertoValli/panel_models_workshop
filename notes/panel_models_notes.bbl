@@ -1,0 +1,971 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Abadie2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=da499bff747c5f6cd0ec9185c820ba4d}{%
+           family={Abadie},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b45c00701af03c6c0ab37b49f5d375c5}{%
+           family={Diamond},
+           familyi={D\bibinitperiod},
+           given={Alexis},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be94165c21f502aeaed11e611358d6be}{%
+           family={Hainmueller},
+           familyi={H\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bb1c0d171effadee95d0232167198de0}
+      \strng{fullhash}{bb1c0d171effadee95d0232167198de0}
+      \strng{bibnamehash}{bb1c0d171effadee95d0232167198de0}
+      \strng{authorbibnamehash}{bb1c0d171effadee95d0232167198de0}
+      \strng{authornamehash}{bb1c0d171effadee95d0232167198de0}
+      \strng{authorfullhash}{bb1c0d171effadee95d0232167198de0}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{490}
+      \field{title}{{Synthetic Control Methods for Comparative Case Studies: Estimating the Effect of California’s Tobacco Control Program}}
+      \field{volume}{105}
+      \field{year}{2010}
+      \field{pages}{493\bibrangedash 505}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1198/jasa.2009.ap08746
+      \endverb
+    \endentry
+    \entry{Angrist2009}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=71a74466a85192690bb7668576e4f2f3}{%
+           family={Angrist},
+           familyi={A\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a02fe00634e62738aecc9dc2446e09c3}{%
+           family={Pischke},
+           familyi={P\bibinitperiod},
+           given={Jorn-Steffen},
+           giveni={J\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{fullhash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{bibnamehash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{authorbibnamehash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{authornamehash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{authorfullhash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The core methods in today's econometric toolkit are linear regression for statistical control, instrumental variables methods for the analysis of natural experiments, and differences-in-differences methods that exploit policy changes. In the modern experimentalist paradigm, these techniques address clear causal questions such as: Do smaller classes increase learning? Should wife batterers be arrested? How much does education raise wages? Mostly Harmless Econometrics shows how the basic tools of applied econometrics allow the data to speak. In addition to econometric essentials, Mostly Harmless Econometrics covers important new extensions--regression-discontinuity designs and quantile regression--as well as how to get standard errors right. Joshua Angrist and Jörn-Steffen Pischke explain why fancier econometric techniques are typically unnecessary and even dangerous. The applied econometric methods emphasized in this book are easy to use and relevant for many areas of contemporary social science. An irreverent review of econometric essentials A focus on tools that applied researchers use most Chapters on regression-discontinuity designs, quantile regression, and standard errors Many empirical examples A clear and concise resource with wide applications}
+      \field{edition}{1}
+      \field{title}{{Mostly Harmless Econometrics: An Empiricist's Companion}}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://EconPapers.repec.org/RePEc:pup:pbooks:8769
+      \endverb
+      \verb{url}
+      \verb https://EconPapers.repec.org/RePEc:pup:pbooks:8769
+      \endverb
+      \keyw{economics; toolkit; econometric; linear; regression; statistics; variables; methods; analysis; natural; experiment; differences; policy; technique; tools; data; discontinuity; quantile; standard; error; social; science; research; design; resource}
+    \endentry
+    \entry{Callaway2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=4a5a67b3788b4a3653a14d9ab03fba0e}{%
+           family={Callaway},
+           familyi={C\bibinitperiod},
+           given={Brantly},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7767820037a369ec59519519e44c7e9a}{%
+           family={Sant’Anna},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelimb H.\bibnamedelimi C.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{fullhash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{bibnamehash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{authorbibnamehash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{authornamehash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{authorfullhash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this article, we consider identification, estimation, and inference procedures for treatment effect parameters using Difference-in-Differences (DiD) with (i) multiple time periods, (ii) variation in treatment timing, and (iii) when the “parallel trends assumption” holds potentially only after conditioning on observed covariates. We show that a family of causal effect parameters are identified in staggered DiD setups, even if differences in observed characteristics create non-parallel outcome dynamics between groups. Our identification results allow one to use outcome regression, inverse probability weighting, or doubly-robust estimands. We also propose different aggregation schemes that can be used to highlight treatment effect heterogeneity across different dimensions as well as to summarize the overall effect of participating in the treatment. We establish the asymptotic properties of the proposed estimators and prove the validity of a computationally convenient bootstrap procedure to conduct asymptotically valid simultaneous (instead of pointwise) inference. Finally, we illustrate the relevance of our proposed tools by analyzing the effect of the minimum wage on teen employment from 2001–2007. Open-source software is available for implementing the proposed methods.}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{note}{Themed Issue: Treatment Effect 1}
+      \field{number}{2}
+      \field{title}{{Difference-in-Differences with multiple time periods}}
+      \field{volume}{225}
+      \field{year}{2021}
+      \field{pages}{200\bibrangedash 230}
+      \range{pages}{31}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2020.12.001
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407620303948
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407620303948
+      \endverb
+      \keyw{Difference-in-Differences,Dynamic treatment effects,Doubly robust,Event study,Variation in treatment timing,Treatment effect heterogeneity,Semi-parametric}
+    \endentry
+    \entry{Card1990}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a9e88233ec6ce30d2d31e294961e3e76}{%
+           family={Card},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{fullhash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{bibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorbibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authornamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorfullhash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial and Labor Relations Review}
+      \field{number}{2}
+      \field{title}{{The Impact of the Mariel Boatlift on the Miami Labor Market}}
+      \field{volume}{43}
+      \field{year}{1990}
+      \field{pages}{245\bibrangedash 257}
+      \range{pages}{13}
+      \verb{urlraw}
+      \verb http://links.jstor.org/sici?sici=0019-7939(199001)43:2<245:TIOTMB>2.0.CO;2-Z
+      \endverb
+      \verb{url}
+      \verb http://links.jstor.org/sici?sici=0019-7939(199001)43:2%3C245:TIOTMB%3E2.0.CO;2-Z
+      \endverb
+    \endentry
+    \entry{GoodmanBacon2021}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=437b3fad5b4a40d10f45b4fc16dd7730}{%
+           family={Goodman-Bacon},
+           familyi={G\bibinithyphendelim B\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{fullhash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{bibnamehash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{authorbibnamehash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{authornamehash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{authorfullhash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The canonical difference-in-differences (DD) estimator contains two time periods, ”pre” and ”post”, and two groups, ”treatment” and ”control”. Most DD applications, however, exploit variation across groups of units that receive treatment at different times. This paper shows that the two-way fixed effects estimator equals a weighted average of all possible two-group/two-period DD estimators in the data. A causal interpretation of two-way fixed effects DD estimates requires both a parallel trends assumption and treatment effects that are constant over time. I show how to decompose the difference between two specifications, and provide a new analysis of models that include time-varying controls.}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{note}{Themed Issue: Treatment Effect 1}
+      \field{number}{2}
+      \field{title}{{Difference-in-differences with variation in treatment timing}}
+      \field{volume}{225}
+      \field{year}{2021}
+      \field{pages}{254\bibrangedash 277}
+      \range{pages}{24}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2021.03.014
+      \endverb
+      \keyw{Difference-in-differences,Variation in treatment timing,Two-way fixed effects,Treatment effect heterogeneity}
+    \endentry
+    \entry{Imai2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3fb69a8c942c769b74775b484c82bbe9}{%
+           family={Imai},
+           familyi={I\bibinitperiod},
+           given={Kosuke},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3e6085646e0f313d2726e2b793b855a}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={In\bibnamedelima Song},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=fe78ccec08e6adb48649d1af0a8c6f84}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Erik\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{fullhash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{bibnamehash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{authorbibnamehash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{authornamehash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{authorfullhash}{c402e1fe53644763bb306c6acd6c5464}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Matching methods improve the validity of causal inference by reducing model dependence and offering intuitive diagnostics. Although they have become a part of the standard tool kit across disciplines, matching methods are rarely used when analysing time-series cross-sectional data. We fill this methodological gap. In the proposed approach, we first match each treated observation with control observations from other units in the same time period that have an identical treatment history up to the prespecified number of lags. We use standard matching and weighting methods to further refine this matched set so that the treated and matched control observations have similar covariate values. Assessing the quality of matches is done by examining covariate balance. Finally, we estimate both short-term and long-term average treatment effects using the difference-in-differences estimator, accounting for a time trend. We illustrate the proposed methodology through simulation and empirical studies. An open-source software package is available for implementing the proposed methods.}
+      \field{journaltitle}{American Journal of Political Science}
+      \field{number}{n/a}
+      \field{title}{{Matching Methods for Causal Inference with Time-Series Cross-Sectional Data}}
+      \field{volume}{n/a}
+      \field{year}{2021}
+      \verb{doi}
+      \verb https://doi.org/10.1111/ajps.12685
+      \endverb
+    \endentry
+    \entry{Kim2021}{manual}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a3e6085646e0f313d2726e2b793b855a}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={In\bibnamedelima Song},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26e7ad21a06ab2bd4cd21154456f1fcb}{%
+           family={Rauh},
+           familyi={R\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0891be9453c74b96321c422576d4552e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3fb69a8c942c769b74775b484c82bbe9}{%
+           family={Imai},
+           familyi={I\bibinitperiod},
+           given={Kosuke},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{70560efdcdd02e4834c14e87ae8dca81}
+      \strng{fullhash}{2c45a5ea0f9e962e92ce2b5d903a7cb6}
+      \strng{bibnamehash}{2c45a5ea0f9e962e92ce2b5d903a7cb6}
+      \strng{authorbibnamehash}{2c45a5ea0f9e962e92ce2b5d903a7cb6}
+      \strng{authornamehash}{70560efdcdd02e4834c14e87ae8dca81}
+      \strng{authorfullhash}{2c45a5ea0f9e962e92ce2b5d903a7cb6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 2.0.0}
+      \field{title}{{PanelMatch: Matching Methods for Causal Inference with Time-Series Cross-Sectional Data}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://CRAN.R-project.org/package=PanelMatch
+      \endverb
+      \verb{url}
+      \verb https://CRAN.R-project.org/package=PanelMatch
+      \endverb
+    \endentry
+    \entry{Liu}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=8eb9a91a6692d1ecdffe8fd6b6c152eb}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Licheng},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=33f1f8102ae8d032fb301ab80a09459d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=525088c4272a93c67f7c5e47f118568c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yiqing},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{fullhash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{bibnamehash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{authorbibnamehash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{authornamehash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{authorfullhash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Journal of Political Science}
+      \field{number}{n/a}
+      \field{title}{{A Practical Guide to Counterfactual Estimators for Causal Inference with Time-Series Cross-Sectional Data}}
+      \field{volume}{n/a}
+      \verb{doi}
+      \verb https://doi.org/10.1111/ajps.12723
+      \endverb
+    \endentry
+    \entry{Roth2022}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=73c1da3266b3c7728f6b1f38a73c7671}{%
+           family={Roth},
+           familyi={R\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7767820037a369ec59519519e44c7e9a}{%
+           family={Sant’Anna},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelimb H.\bibnamedelimi C.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79a59a4042188a87fa8867c79b4fffed}{%
+           family={Bilinskiz},
+           familyi={B\bibinitperiod},
+           given={Alyssa},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f6bcb39cc9f1a59f6488351976b9a42}{%
+           family={Poe},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{939f8adec55fe64296898de93fbee7ff}
+      \strng{fullhash}{89624539a97a75b5d53853eeaaff3893}
+      \strng{bibnamehash}{89624539a97a75b5d53853eeaaff3893}
+      \strng{authorbibnamehash}{89624539a97a75b5d53853eeaaff3893}
+      \strng{authornamehash}{939f8adec55fe64296898de93fbee7ff}
+      \strng{authorfullhash}{89624539a97a75b5d53853eeaaff3893}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Working Paper}
+      \field{month}{1}
+      \field{title}{{What’s Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature}}
+      \field{year}{2022}
+    \endentry
+    \entry{SantAnna2020}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7767820037a369ec59519519e44c7e9a}{%
+           family={Sant’Anna},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelimb H.\bibnamedelimi C.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3313b0fb30c52802abe615a883198713}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{fullhash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{bibnamehash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{authorbibnamehash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{authornamehash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{authorfullhash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{{Doubly robust difference-in-differences estimators}}
+      \field{volume}{219}
+      \field{year}{2020}
+      \field{pages}{101\bibrangedash 122}
+      \range{pages}{22}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2020.06.003
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407620301901
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407620301901
+      \endverb
+    \endentry
+    \entry{Xu2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=525088c4272a93c67f7c5e47f118568c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yiqing},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{fullhash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{bibnamehash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{authorbibnamehash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{authornamehash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{authorfullhash}{525088c4272a93c67f7c5e47f118568c}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Political Analysis}
+      \field{number}{1}
+      \field{title}{{Generalized Synthetic Control Method: Causal Inference with Interactive Fixed Effects Models}}
+      \field{volume}{25}
+      \field{year}{2017}
+      \field{pages}{57\bibrangedash 76}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1017/pan.2016.2
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{Abadie2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=da499bff747c5f6cd0ec9185c820ba4d}{%
+           family={Abadie},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b45c00701af03c6c0ab37b49f5d375c5}{%
+           family={Diamond},
+           familyi={D\bibinitperiod},
+           given={Alexis},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be94165c21f502aeaed11e611358d6be}{%
+           family={Hainmueller},
+           familyi={H\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bb1c0d171effadee95d0232167198de0}
+      \strng{fullhash}{bb1c0d171effadee95d0232167198de0}
+      \strng{bibnamehash}{bb1c0d171effadee95d0232167198de0}
+      \strng{authorbibnamehash}{bb1c0d171effadee95d0232167198de0}
+      \strng{authornamehash}{bb1c0d171effadee95d0232167198de0}
+      \strng{authorfullhash}{bb1c0d171effadee95d0232167198de0}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{490}
+      \field{title}{{Synthetic Control Methods for Comparative Case Studies: Estimating the Effect of California’s Tobacco Control Program}}
+      \field{volume}{105}
+      \field{year}{2010}
+      \field{pages}{493\bibrangedash 505}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1198/jasa.2009.ap08746
+      \endverb
+    \endentry
+    \entry{Angrist2009}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=71a74466a85192690bb7668576e4f2f3}{%
+           family={Angrist},
+           familyi={A\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a02fe00634e62738aecc9dc2446e09c3}{%
+           family={Pischke},
+           familyi={P\bibinitperiod},
+           given={Jorn-Steffen},
+           giveni={J\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{fullhash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{bibnamehash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{authorbibnamehash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{authornamehash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \strng{authorfullhash}{bd2fa3a39adc1ddb4b8efebf57abd9d5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The core methods in today's econometric toolkit are linear regression for statistical control, instrumental variables methods for the analysis of natural experiments, and differences-in-differences methods that exploit policy changes. In the modern experimentalist paradigm, these techniques address clear causal questions such as: Do smaller classes increase learning? Should wife batterers be arrested? How much does education raise wages? Mostly Harmless Econometrics shows how the basic tools of applied econometrics allow the data to speak. In addition to econometric essentials, Mostly Harmless Econometrics covers important new extensions--regression-discontinuity designs and quantile regression--as well as how to get standard errors right. Joshua Angrist and Jörn-Steffen Pischke explain why fancier econometric techniques are typically unnecessary and even dangerous. The applied econometric methods emphasized in this book are easy to use and relevant for many areas of contemporary social science. An irreverent review of econometric essentials A focus on tools that applied researchers use most Chapters on regression-discontinuity designs, quantile regression, and standard errors Many empirical examples A clear and concise resource with wide applications}
+      \field{edition}{1}
+      \field{title}{{Mostly Harmless Econometrics: An Empiricist's Companion}}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://EconPapers.repec.org/RePEc:pup:pbooks:8769
+      \endverb
+      \verb{url}
+      \verb https://EconPapers.repec.org/RePEc:pup:pbooks:8769
+      \endverb
+      \keyw{economics; toolkit; econometric; linear; regression; statistics; variables; methods; analysis; natural; experiment; differences; policy; technique; tools; data; discontinuity; quantile; standard; error; social; science; research; design; resource}
+    \endentry
+    \entry{Callaway2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=4a5a67b3788b4a3653a14d9ab03fba0e}{%
+           family={Callaway},
+           familyi={C\bibinitperiod},
+           given={Brantly},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7767820037a369ec59519519e44c7e9a}{%
+           family={Sant’Anna},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelimb H.\bibnamedelimi C.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{fullhash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{bibnamehash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{authorbibnamehash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{authornamehash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \strng{authorfullhash}{81e94baa528cefc8bb56e5c1a70471e2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this article, we consider identification, estimation, and inference procedures for treatment effect parameters using Difference-in-Differences (DiD) with (i) multiple time periods, (ii) variation in treatment timing, and (iii) when the “parallel trends assumption” holds potentially only after conditioning on observed covariates. We show that a family of causal effect parameters are identified in staggered DiD setups, even if differences in observed characteristics create non-parallel outcome dynamics between groups. Our identification results allow one to use outcome regression, inverse probability weighting, or doubly-robust estimands. We also propose different aggregation schemes that can be used to highlight treatment effect heterogeneity across different dimensions as well as to summarize the overall effect of participating in the treatment. We establish the asymptotic properties of the proposed estimators and prove the validity of a computationally convenient bootstrap procedure to conduct asymptotically valid simultaneous (instead of pointwise) inference. Finally, we illustrate the relevance of our proposed tools by analyzing the effect of the minimum wage on teen employment from 2001–2007. Open-source software is available for implementing the proposed methods.}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{note}{Themed Issue: Treatment Effect 1}
+      \field{number}{2}
+      \field{title}{{Difference-in-Differences with multiple time periods}}
+      \field{volume}{225}
+      \field{year}{2021}
+      \field{pages}{200\bibrangedash 230}
+      \range{pages}{31}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2020.12.001
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407620303948
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407620303948
+      \endverb
+      \keyw{Difference-in-Differences,Dynamic treatment effects,Doubly robust,Event study,Variation in treatment timing,Treatment effect heterogeneity,Semi-parametric}
+    \endentry
+    \entry{Card1990}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a9e88233ec6ce30d2d31e294961e3e76}{%
+           family={Card},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{fullhash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{bibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorbibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authornamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorfullhash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial and Labor Relations Review}
+      \field{number}{2}
+      \field{title}{{The Impact of the Mariel Boatlift on the Miami Labor Market}}
+      \field{volume}{43}
+      \field{year}{1990}
+      \field{pages}{245\bibrangedash 257}
+      \range{pages}{13}
+      \verb{urlraw}
+      \verb http://links.jstor.org/sici?sici=0019-7939(199001)43:2<245:TIOTMB>2.0.CO;2-Z
+      \endverb
+      \verb{url}
+      \verb http://links.jstor.org/sici?sici=0019-7939(199001)43:2%3C245:TIOTMB%3E2.0.CO;2-Z
+      \endverb
+    \endentry
+    \entry{GoodmanBacon2021}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=437b3fad5b4a40d10f45b4fc16dd7730}{%
+           family={Goodman-Bacon},
+           familyi={G\bibinithyphendelim B\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{fullhash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{bibnamehash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{authorbibnamehash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{authornamehash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \strng{authorfullhash}{437b3fad5b4a40d10f45b4fc16dd7730}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The canonical difference-in-differences (DD) estimator contains two time periods, ”pre” and ”post”, and two groups, ”treatment” and ”control”. Most DD applications, however, exploit variation across groups of units that receive treatment at different times. This paper shows that the two-way fixed effects estimator equals a weighted average of all possible two-group/two-period DD estimators in the data. A causal interpretation of two-way fixed effects DD estimates requires both a parallel trends assumption and treatment effects that are constant over time. I show how to decompose the difference between two specifications, and provide a new analysis of models that include time-varying controls.}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{note}{Themed Issue: Treatment Effect 1}
+      \field{number}{2}
+      \field{title}{{Difference-in-differences with variation in treatment timing}}
+      \field{volume}{225}
+      \field{year}{2021}
+      \field{pages}{254\bibrangedash 277}
+      \range{pages}{24}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2021.03.014
+      \endverb
+      \keyw{Difference-in-differences,Variation in treatment timing,Two-way fixed effects,Treatment effect heterogeneity}
+    \endentry
+    \entry{Imai2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3fb69a8c942c769b74775b484c82bbe9}{%
+           family={Imai},
+           familyi={I\bibinitperiod},
+           given={Kosuke},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3e6085646e0f313d2726e2b793b855a}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={In\bibnamedelima Song},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=fe78ccec08e6adb48649d1af0a8c6f84}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Erik\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{fullhash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{bibnamehash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{authorbibnamehash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{authornamehash}{c402e1fe53644763bb306c6acd6c5464}
+      \strng{authorfullhash}{c402e1fe53644763bb306c6acd6c5464}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Matching methods improve the validity of causal inference by reducing model dependence and offering intuitive diagnostics. Although they have become a part of the standard tool kit across disciplines, matching methods are rarely used when analysing time-series cross-sectional data. We fill this methodological gap. In the proposed approach, we first match each treated observation with control observations from other units in the same time period that have an identical treatment history up to the prespecified number of lags. We use standard matching and weighting methods to further refine this matched set so that the treated and matched control observations have similar covariate values. Assessing the quality of matches is done by examining covariate balance. Finally, we estimate both short-term and long-term average treatment effects using the difference-in-differences estimator, accounting for a time trend. We illustrate the proposed methodology through simulation and empirical studies. An open-source software package is available for implementing the proposed methods.}
+      \field{journaltitle}{American Journal of Political Science}
+      \field{number}{n/a}
+      \field{title}{{Matching Methods for Causal Inference with Time-Series Cross-Sectional Data}}
+      \field{volume}{n/a}
+      \field{year}{2021}
+      \verb{doi}
+      \verb https://doi.org/10.1111/ajps.12685
+      \endverb
+    \endentry
+    \entry{Kim2021}{manual}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a3e6085646e0f313d2726e2b793b855a}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={In\bibnamedelima Song},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26e7ad21a06ab2bd4cd21154456f1fcb}{%
+           family={Rauh},
+           familyi={R\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0891be9453c74b96321c422576d4552e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3fb69a8c942c769b74775b484c82bbe9}{%
+           family={Imai},
+           familyi={I\bibinitperiod},
+           given={Kosuke},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{70560efdcdd02e4834c14e87ae8dca81}
+      \strng{fullhash}{2c45a5ea0f9e962e92ce2b5d903a7cb6}
+      \strng{bibnamehash}{2c45a5ea0f9e962e92ce2b5d903a7cb6}
+      \strng{authorbibnamehash}{2c45a5ea0f9e962e92ce2b5d903a7cb6}
+      \strng{authornamehash}{70560efdcdd02e4834c14e87ae8dca81}
+      \strng{authorfullhash}{2c45a5ea0f9e962e92ce2b5d903a7cb6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 2.0.0}
+      \field{title}{{PanelMatch: Matching Methods for Causal Inference with Time-Series Cross-Sectional Data}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://CRAN.R-project.org/package=PanelMatch
+      \endverb
+      \verb{url}
+      \verb https://CRAN.R-project.org/package=PanelMatch
+      \endverb
+    \endentry
+    \entry{Liu}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=8eb9a91a6692d1ecdffe8fd6b6c152eb}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Licheng},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=33f1f8102ae8d032fb301ab80a09459d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=525088c4272a93c67f7c5e47f118568c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yiqing},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{fullhash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{bibnamehash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{authorbibnamehash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{authornamehash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \strng{authorfullhash}{9ae3cb84a722a2d22f3137c7519c1862}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Journal of Political Science}
+      \field{number}{n/a}
+      \field{title}{{A Practical Guide to Counterfactual Estimators for Causal Inference with Time-Series Cross-Sectional Data}}
+      \field{volume}{n/a}
+      \verb{doi}
+      \verb https://doi.org/10.1111/ajps.12723
+      \endverb
+    \endentry
+    \entry{Roth2022}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=73c1da3266b3c7728f6b1f38a73c7671}{%
+           family={Roth},
+           familyi={R\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7767820037a369ec59519519e44c7e9a}{%
+           family={Sant’Anna},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelimb H.\bibnamedelimi C.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79a59a4042188a87fa8867c79b4fffed}{%
+           family={Bilinskiz},
+           familyi={B\bibinitperiod},
+           given={Alyssa},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f6bcb39cc9f1a59f6488351976b9a42}{%
+           family={Poe},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{939f8adec55fe64296898de93fbee7ff}
+      \strng{fullhash}{89624539a97a75b5d53853eeaaff3893}
+      \strng{bibnamehash}{89624539a97a75b5d53853eeaaff3893}
+      \strng{authorbibnamehash}{89624539a97a75b5d53853eeaaff3893}
+      \strng{authornamehash}{939f8adec55fe64296898de93fbee7ff}
+      \strng{authorfullhash}{89624539a97a75b5d53853eeaaff3893}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Working Paper}
+      \field{month}{1}
+      \field{title}{{What’s Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature}}
+      \field{year}{2022}
+    \endentry
+    \entry{SantAnna2020}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7767820037a369ec59519519e44c7e9a}{%
+           family={Sant’Anna},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelimb H.\bibnamedelimi C.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3313b0fb30c52802abe615a883198713}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{fullhash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{bibnamehash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{authorbibnamehash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{authornamehash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \strng{authorfullhash}{6c47f1fd7a83092f82c2766ab840a44b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{{Doubly robust difference-in-differences estimators}}
+      \field{volume}{219}
+      \field{year}{2020}
+      \field{pages}{101\bibrangedash 122}
+      \range{pages}{22}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2020.06.003
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407620301901
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407620301901
+      \endverb
+    \endentry
+    \entry{Xu2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=525088c4272a93c67f7c5e47f118568c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yiqing},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{fullhash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{bibnamehash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{authorbibnamehash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{authornamehash}{525088c4272a93c67f7c5e47f118568c}
+      \strng{authorfullhash}{525088c4272a93c67f7c5e47f118568c}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Political Analysis}
+      \field{number}{1}
+      \field{title}{{Generalized Synthetic Control Method: Causal Inference with Interactive Fixed Effects Models}}
+      \field{volume}{25}
+      \field{year}{2017}
+      \field{pages}{57\bibrangedash 76}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1017/pan.2016.2
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -4,14 +4,14 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}    
 \usepackage{csquotes}
-\usepackage[style=apa, maxcitenames=3]{biblatex}
+\usepackage[style=apa, backend=biber, maxcitenames=3]{biblatex}
 
 
 \DeclareLanguageMapping{american}{american-apa}
 
 \AtEveryBibitem{\clearfield{labelmonth}}
 
-\addbibresource{refs_workshop}
+\addbibresource{refs_workshop.bib}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -46,10 +46,10 @@
 
 <<echo=FALSE>>=
 # set paths
-setwd(here::here("notes"))
-Sys.setenv(TEXINPUTS=getwd(),
-           BIBINPUTS=getwd(),
-           BSTINPUTS=getwd())
+# setwd(here::here("notes"))
+# Sys.setenv(TEXINPUTS=getwd(),
+#            BIBINPUTS=getwd(),
+#            BSTINPUTS=getwd())
 
 system(paste("biber", sub("\\.Rnw$", "", knitr::current_input())))
 @
@@ -123,7 +123,7 @@ There are various solutions to the weighting and comparison problems, which are 
 % non-parallel trends
 The assumption of parallel trends is hard to motivate, and impossible to prove. There are common tests for the existence of pre-treatment trends, like the common event study plots where the outcome is regressed onto lags and leads of the treatment. However, recent studies demonstrated that these tests are underpowered when it comes to rejecting the presence of pre-trends. In fact, there is a growing literature just on this issue, but I won't go into it in this note.
 
-That said, scholars proposed ways to estimate consistent ATTs when parallel trends are valid conditional on a set of covariates \parencite{Sant'Anna2020}. The authors proposed a family of estimators that have desirable properties when either the outcome model or the covariate set are correctly specified.
+That said, scholars proposed ways to estimate consistent ATTs when parallel trends are valid conditional on a set of covariates \parencite{SantAnna2020}. The authors proposed a family of estimators that have desirable properties when either the outcome model or the covariate set are correctly specified.
 
 % effect heterogeneity
 
@@ -152,11 +152,11 @@ There are currently two R packages for SCM analyses: \texttt{tidysynth}, \texttt
 \begin{figure}
 \small
 \caption{Heuristic tree of CSTS methods.}
-    \Tree[. [.{N. treated units > 1} [.{T = 2} {Classic DiD} ]
+    \Tree[. [.{N. treated units > 1} [.{T = 2} {Classic DiD\\ (Sec. 4.2)} ]
                            [.{T > 2} [.{Non-absorbing state\\ treatment} {\texttt{PanelMatch}\\ \texttt{fect}\\ \texttt{GSC}} ]
                                      [.{Absorbing-state\\ treatment} [.{Heterogeneity, spillovers,\\ staggered adoption} ]
-                                                                      [.{Classic DiD with\\multiple periods} \texttt{feols} ]]]]
-            [.{N. treated units = 1} [.{Synthetic control\\ method} ]]
+                                                                      [.{Classic DiD with multiple\\ periods (Sec 4.3)} ]]]]
+            [.{N. treated units = 1} [.{SCM\\ (Sec. 4.1)} ]]
           ]
 \end{figure}
 
@@ -219,7 +219,7 @@ In this family of settings, the first distinction to be made concerns whether th
 
 \subsubsection{Failure of Parallel Trends Assumption}
 
-The parallel trend assumption is impossible to demonstrate, and even common pre-trend tests fail to really rule out the existence of biased. However, when scholars believe that potential outcomes of treated and control observations really follow parallel trends conditional on some covariates there are ways to estimate consistent and efficient ATTs. Based on the methods suggested by \textcite{Sant'Anna2020}, the \texttt{DRDID} package allows to fit DiD estimators that return correct ATTs conditional on the correct covariate specifications.
+The parallel trend assumption is impossible to demonstrate, and even common pre-trend tests fail to really rule out the existence of differential selection bias. However, when scholars believe that potential outcomes of treated and control observations really follow parallel trends conditional on some covariates there are ways to estimate consistent and efficient ATTs. Based on the methods suggested by \textcite{SantAnna2020}, the \texttt{DRDID} package allows to fit DiD estimators that return correct ATTs conditional on the correct covariate specifications.
 
 \subsubsection{Staggered Adoption}
 
@@ -227,7 +227,7 @@ The parallel trend assumption is impossible to demonstrate, and even common pre-
 
 \subsection{Non-Absorbing Treatments and Their Estimators}
 
-For settings that go beyond the typical policy implementation where a set of treated units receives an absorbing state treatment, methodologists have developed
+For settings that go beyond the typical policy implementation where a set of treated units receives an absorbing state treatment, methodologists have developed different approaches to extend the DiD logic of counterfactual estimation while allowing for more complicated data structures. In this section I discuss three methods: The generalized synthetic control \parencite[GSCM]{Xu2017}, the PanelMatch \parencite{Imai2021, Kim2021}, and the fect \parencite{Liu} counterfactual methods.
 
 
 

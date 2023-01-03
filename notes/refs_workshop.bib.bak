@@ -91,4 +91,68 @@
   doi     = {10.1198/jasa.2009.ap08746},
 }
 
+@Article{SantAnna2020,
+  author  = {Sant’Anna, Pedro H. C. and Zhao, Jun},
+  journal = {Journal of Econometrics},
+  title   = {{Doubly robust difference-in-differences estimators}},
+  year    = {2020},
+  issn    = {0304-4076},
+  number  = {1},
+  pages   = {101--122},
+  volume  = {219},
+  doi     = {https://doi.org/10.1016/j.jeconom.2020.06.003},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0304407620301901},
+}
+
+@Article{Roth2022,
+  author  = {Roth, Jonathan and Sant’Anna, Pedro H. C. and Bilinskiz, Alyssa and Poe, John},
+  journal = {Working Paper},
+  title   = {{What’s Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature}},
+  year    = {2022},
+  month   = jan,
+}
+
+@Article{Xu2017,
+  author    = {Xu, Yiqing},
+  journal   = {Political Analysis},
+  title     = {{Generalized Synthetic Control Method: Causal Inference with Interactive Fixed Effects Models}},
+  year      = {2017},
+  number    = {1},
+  pages     = {57-–76},
+  volume    = {25},
+  doi       = {10.1017/pan.2016.2},
+  publisher = {Cambridge University Press},
+}
+
+@Manual{Kim2021,
+  title  = {{PanelMatch: Matching Methods for Causal Inference with Time-Series Cross-Sectional Data}},
+  author = {Kim, In Song and Rauh, Adam and Wang, Erik and Imai, Kosuke},
+  note   = {R package version 2.0.0},
+  year   = {2021},
+  url    = {https://CRAN.R-project.org/package=PanelMatch},
+}
+
+@Article{Imai2021,
+  author   = {Imai, Kosuke and Kim, In Song and Wang, Erik H.},
+  journal  = {American Journal of Political Science},
+  title    = {{Matching Methods for Causal Inference with Time-Series Cross-Sectional Data}},
+  year     = {2021},
+  number   = {n/a},
+  volume   = {n/a},
+  abstract = {Matching methods improve the validity of causal inference by reducing model dependence and offering intuitive diagnostics. Although they have become a part of the standard tool kit across disciplines, matching methods are rarely used when analysing time-series cross-sectional data. We fill this methodological gap. In the proposed approach, we first match each treated observation with control observations from other units in the same time period that have an identical treatment history up to the prespecified number of lags. We use standard matching and weighting methods to further refine this matched set so that the treated and matched control observations have similar covariate values. Assessing the quality of matches is done by examining covariate balance. Finally, we estimate both short-term and long-term average treatment effects using the difference-in-differences estimator, accounting for a time trend. We illustrate the proposed methodology through simulation and empirical studies. An open-source software package is available for implementing the proposed methods.},
+  doi      = {https://doi.org/10.1111/ajps.12685},
+}
+
+@Article{Liu,
+  author   = {Liu, Licheng and Wang, Ye and Xu, Yiqing},
+  journal  = {American Journal of Political Science},
+  title    = {{A Practical Guide to Counterfactual Estimators for Causal Inference with Time-Series Cross-Sectional Data}},
+  number   = {n/a},
+  volume   = {n/a},
+  abstract = {Abstract This paper introduces a simple framework of counterfactual estimation for causal inference with time-series cross-sectional data, in which we estimate the average treatment effect on the treated by directly imputing counterfactual outcomes for treated observations. We discuss several novel estimators under this framework, including the fixed effects counterfactual estimator, interactive fixed effects counterfactual estimator and matrix completion estimator. They provide more reliable causal estimates than conventional two-way fixed effects models when treatment effects are heterogeneous or unobserved time-varying confounders exist. Moreover, we propose a new dynamic treatment effects plot, along with several diagnostic tests, to help researchers gauge the validity of the identifying assumptions. We illustrate these methods with two political economy examples and develop an open-source package, fect, in both R and Stata to facilitate implementation.},
+  doi      = {https://doi.org/10.1111/ajps.12723},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/ajps.12723},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1111/ajps.12723},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

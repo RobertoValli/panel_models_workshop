@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  3 JAN 2023 08:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  3 JAN 2023 09:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1025,97 +1025,28 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 137.
-
-LaTeX Warning: Citation 'Angrist2009' on page 3 undefined on input line 144.
-
-[3]
-
-LaTeX Warning: Citation 'Abadie2010' on page 4 undefined on input line 158.
-
-
-LaTeX Warning: Citation 'Roth2022' on page 4 undefined on input line 158.
-
-
-LaTeX Warning: Citation '' on page 4 undefined on input line 158.
-
-
-LaTeX Warning: Citation 'Card1990' on page 4 undefined on input line 160.
-
-
-LaTeX Warning: Citation '' on page 4 undefined on input line 160.
-
-
-LaTeX Warning: Citation 'Angrist2009' on page 4 undefined on input line 160.
-
-
-LaTeX Warning: Citation 'Angrist2009' on page 4 undefined on input line 171.
-
-
-LaTeX Warning: Citation '' on page 4 undefined on input line 171.
-
-
-LaTeX Warning: Citation 'GoodmanBacon2021' on page 4 undefined on input line 17
-6.
-
-
-LaTeX Warning: Citation 'Callaway2021' on page 4 undefined on input line 176.
-
-[4]
-
-LaTeX Warning: Citation 'Sant'Anna2020' on page 5 undefined on input line 185.
-
-
-LaTeX Warning: Citation 'Angrist2009' on page 5 undefined on input line 195.
-
-
-LaTeX Warning: Citation '' on page 5 undefined on input line 195.
-
-
-LaTeX Warning: Citation 'Callaway2021' on page 5 undefined on input line 195.
-
-
-LaTeX Warning: Citation '' on page 5 undefined on input line 195.
-
-[5]
+[3] [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 214.
 [6]
 Package color Info: Redefining color shadecolor on input line 231.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 234.
-[7]
-
-LaTeX Warning: Citation 'Sant'Anna2020' on page 8 undefined on input line 306.
-
-
-LaTeX Warning: Citation '' on page 8 undefined on input line 306.
-
-
-LaTeX Warning: Empty bibliography on input line 318.
-
-[8] (panel_models_notes.aux)
-
-LaTeX Warning: There were undefined references.
-
+[7] [8] [9] (panel_models_notes.aux)
 Package rerunfilecheck Info: File `panel_models_notes.out' has not changed.
 (rerunfilecheck)             Checksum: 116F15228E6E38FC83DD2B2229F490F2;3740.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                panel_models_notes
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'panel_models_notes.run.xml'.
 \openout1 = `panel_models_notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22162 strings out of 478032
- 394744 string characters out of 2827995
- 1213334 words of memory out of 3000000
- 40541 multiletter control sequences out of 15000+600000
+ 22296 strings out of 478032
+ 398617 string characters out of 2827995
+ 1211829 words of memory out of 3000000
+ 40662 multiletter control sequences out of 15000+600000
  553483 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,70p,1104b,5043s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,11n,70p,1479b,5043s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{
 C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/
 Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:
@@ -1141,9 +1072,9 @@ C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
 <C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
 <C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pf
 b>
-Output written on panel_models_notes.pdf (8 pages, 448664 bytes).
+Output written on panel_models_notes.pdf (9 pages, 466814 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
+ 278 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
