@@ -11,7 +11,10 @@ The workshop is not meant to be a complete course on causal inference, so it mak
 Second, it requires participants to have read **at least** my notes on the literature, which are meant to guide you through the sometimes bewildering array of alternative methods. However, for a better and slightly more technical understanding of recent literature, I **highly** recommend reading the great review paper by Roth et al. (2022) in the "necessary readings" folder.
 
 ## Workshop structure
-The workshop is centered around a select number of papers that highlight deficiencies of difference-in-differences models in certain settings and suggest extensions to the standard model. After a brief overview of the literature and a dust-off of the basic DiD model, we go through 
+
+The workshop is centered around a select number of papers that highlight deficiencies of difference-in-differences models in certain settings and suggest extensions to the standard model. After a brief overview of the literature and a dust-off of the basic DiD model, we go through the main violations of basic DiD assumptions, and the alternative methods designed to deal with them.
+
+In the second part, participants are welcome to bring their own CSTS data applications. Together we might brainstorm and discuss which methods are more appropriate for the data, what assuptions might be necessary to make them work, and what R package exist to implement them.
 
 The workshop's contents are the following:
 
