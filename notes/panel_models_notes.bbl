@@ -288,41 +288,71 @@
       \endverb
       \keyw{Difference-in-Differences,Dynamic treatment effects,Doubly robust,Event study,Variation in treatment timing,Treatment effect heterogeneity,Semi-parametric}
     \endentry
-    \entry{Card1990}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a9e88233ec6ce30d2d31e294961e3e76}{%
-           family={Card},
+    \entry{Chaisemartin2022}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e476426fa9151355cd09327277745a1c}{%
+           family={Chaisemartin},
            familyi={C\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
+           given={Clément},
+           giveni={C\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=411f64c7f01ee0e2a0fdc31e20535454}{%
+           family={D'Haultf{œ}uille},
+           familyi={D\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{fullhash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{bibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{authorbibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{authornamehash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{authorfullhash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \strng{namehash}{48bc62d3b1de71e129248df511640093}
+      \strng{fullhash}{48bc62d3b1de71e129248df511640093}
+      \strng{bibnamehash}{48bc62d3b1de71e129248df511640093}
+      \strng{authorbibnamehash}{48bc62d3b1de71e129248df511640093}
+      \strng{authornamehash}{48bc62d3b1de71e129248df511640093}
+      \strng{authorfullhash}{48bc62d3b1de71e129248df511640093}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Industrial and Labor Relations Review}
-      \field{number}{2}
-      \field{title}{{The Impact of the Mariel Boatlift on the Miami Labor Market}}
-      \field{volume}{43}
-      \field{year}{1990}
-      \field{pages}{245\bibrangedash 257}
-      \range{pages}{13}
-      \verb{urlraw}
-      \verb http://links.jstor.org/sici?sici=0019-7939(199001)43:2<245:TIOTMB>2.0.CO;2-Z
+      \field{issn}{1368-4221}
+      \field{journaltitle}{The Econometrics Journal}
+      \field{month}{06}
+      \field{title}{{Two-way fixed effects and differences-in-differences with heterogeneous treatment effects: a survey}}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1093/ectj/utac017
       \endverb
-      \verb{url}
-      \verb http://links.jstor.org/sici?sici=0019-7939(199001)43:2%3C245:TIOTMB%3E2.0.CO;2-Z
-      \endverb
+    \endentry
+    \entry{Gardner}{unpublished}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=91208309c506b8d2252f8c9828f1f742}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{fullhash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{bibnamehash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{authorbibnamehash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{authornamehash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{authorfullhash}{91208309c506b8d2252f8c9828f1f742}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{Working Paper}
+      \field{title}{{Two-stage differences in differences}}
+      \field{year}{2021}
     \endentry
     \entry{GoodmanBacon2021}{article}{}
       \name{author}{1}{}{%
@@ -585,6 +615,53 @@
       \endverb
       \verb{url}
       \verb https://www.sciencedirect.com/science/article/pii/S0304407620301901
+      \endverb
+    \endentry
+    \entry{Sun2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3011926b49b3aa7b3e8913ca855e42fc}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Liyang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1bfe7aacc440efc360e6a6e3eaa7a2d3}{%
+           family={Abraham},
+           familyi={A\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{fullhash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{bibnamehash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{authorbibnamehash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{authornamehash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{authorfullhash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{note}{Themed Issue: Treatment Effect 1}
+      \field{number}{2}
+      \field{title}{{Estimating dynamic treatment effects in event studies with heterogeneous treatment effects}}
+      \field{volume}{225}
+      \field{year}{2021}
+      \field{pages}{175\bibrangedash 199}
+      \range{pages}{25}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2020.09.006
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S030440762030378X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S030440762030378X
       \endverb
     \endentry
     \entry{Xu2017}{article}{}
@@ -894,41 +971,71 @@
       \endverb
       \keyw{Difference-in-Differences,Dynamic treatment effects,Doubly robust,Event study,Variation in treatment timing,Treatment effect heterogeneity,Semi-parametric}
     \endentry
-    \entry{Card1990}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a9e88233ec6ce30d2d31e294961e3e76}{%
-           family={Card},
+    \entry{Chaisemartin2022}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e476426fa9151355cd09327277745a1c}{%
+           family={Chaisemartin},
            familyi={C\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
+           given={Clément},
+           giveni={C\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=411f64c7f01ee0e2a0fdc31e20535454}{%
+           family={D'Haultf{œ}uille},
+           familyi={D\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{fullhash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{bibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{authorbibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{authornamehash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \strng{authorfullhash}{a9e88233ec6ce30d2d31e294961e3e76}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \strng{namehash}{48bc62d3b1de71e129248df511640093}
+      \strng{fullhash}{48bc62d3b1de71e129248df511640093}
+      \strng{bibnamehash}{48bc62d3b1de71e129248df511640093}
+      \strng{authorbibnamehash}{48bc62d3b1de71e129248df511640093}
+      \strng{authornamehash}{48bc62d3b1de71e129248df511640093}
+      \strng{authorfullhash}{48bc62d3b1de71e129248df511640093}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Industrial and Labor Relations Review}
-      \field{number}{2}
-      \field{title}{{The Impact of the Mariel Boatlift on the Miami Labor Market}}
-      \field{volume}{43}
-      \field{year}{1990}
-      \field{pages}{245\bibrangedash 257}
-      \range{pages}{13}
-      \verb{urlraw}
-      \verb http://links.jstor.org/sici?sici=0019-7939(199001)43:2<245:TIOTMB>2.0.CO;2-Z
+      \field{issn}{1368-4221}
+      \field{journaltitle}{The Econometrics Journal}
+      \field{month}{06}
+      \field{title}{{Two-way fixed effects and differences-in-differences with heterogeneous treatment effects: a survey}}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1093/ectj/utac017
       \endverb
-      \verb{url}
-      \verb http://links.jstor.org/sici?sici=0019-7939(199001)43:2%3C245:TIOTMB%3E2.0.CO;2-Z
-      \endverb
+    \endentry
+    \entry{Gardner}{unpublished}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=91208309c506b8d2252f8c9828f1f742}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{fullhash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{bibnamehash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{authorbibnamehash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{authornamehash}{91208309c506b8d2252f8c9828f1f742}
+      \strng{authorfullhash}{91208309c506b8d2252f8c9828f1f742}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{Working Paper}
+      \field{title}{{Two-stage differences in differences}}
+      \field{year}{2021}
     \endentry
     \entry{GoodmanBacon2021}{article}{}
       \name{author}{1}{}{%
@@ -1191,6 +1298,53 @@
       \endverb
       \verb{url}
       \verb https://www.sciencedirect.com/science/article/pii/S0304407620301901
+      \endverb
+    \endentry
+    \entry{Sun2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3011926b49b3aa7b3e8913ca855e42fc}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Liyang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1bfe7aacc440efc360e6a6e3eaa7a2d3}{%
+           family={Abraham},
+           familyi={A\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{fullhash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{bibnamehash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{authorbibnamehash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{authornamehash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \strng{authorfullhash}{c7a84aba4076f349fbfad5258d37c1a1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{note}{Themed Issue: Treatment Effect 1}
+      \field{number}{2}
+      \field{title}{{Estimating dynamic treatment effects in event studies with heterogeneous treatment effects}}
+      \field{volume}{225}
+      \field{year}{2021}
+      \field{pages}{175\bibrangedash 199}
+      \range{pages}{25}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2020.09.006
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S030440762030378X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S030440762030378X
       \endverb
     \endentry
     \entry{Xu2017}{article}{}

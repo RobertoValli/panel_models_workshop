@@ -1,4 +1,4 @@
-\documentclass[hidelinks]{article}\usepackage[]{graphicx}\usepackage[]{color}
+\documentclass[hidelinks]{article}\usepackage[]{graphicx}\usepackage[]{xcolor}
 % maxwidth is the original width if it is less than linewidth
 % otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -12,9 +12,6 @@
 \makeatother
 
 \definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\makeatletter
-\@ifundefined{AddToHook}{}{\AddToHook{package/xcolor/after}{\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}}}
-\makeatother
 \newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
 \newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
 \newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
@@ -49,14 +46,6 @@
 \definecolor{messagecolor}{rgb}{0, 0, 0}
 \definecolor{warningcolor}{rgb}{1, 0, 1}
 \definecolor{errorcolor}{rgb}{1, 0, 0}
-\makeatletter
-\@ifundefined{AddToHook}{}{\AddToHook{package/xcolor/after}{
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-}}
-\makeatother
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
@@ -114,9 +103,9 @@
 
 \section{Introduction}
 
-Political science is often characterized by research questions that cannot be studied experimentally because ethical or practical reasons prevent administration of theoretically relevant treatments. The frequent impossibility of using true randomization in polisci research makes all the more important to find alternative ways to estimate causal effects of policies and other interventions. These notes discuss recent developments in a specific family of statistical methods that exploit within and across-unit variation over time to estimate counterfactual outcomes, and thereby approximate estimates of average causal effects. 
+Political science is often characterized by research questions that cannot be studied experimentally because ethical or practical reasons prevent administration of theoretically relevant treatments. Gioven the frequent impossibility of using true randomization in polisci research it is all the more important to find ways to estimate (close-to) causal effects of policies and other interventions with observational data. These notes discuss recent developments in a family of statistical methods that exploit within and across-unit variation over time to estimate counterfactual outcomes, and thereby approximate estimates of average causal effects. In fact the methods reviewed in these notes were developed within slightly different literatures, so one can probably argue the extent to which they all belong together. I try to make the case that they all do.
 
-The goal of these notes is to tie together related strands of literature that highlight the limitations of standard difference-in-differences methods (DiD) and propose corrections and new estimators. The interesting thing about this literature is that not only it develops extremely fast, but it accompanies a harsh critique of common modelling choices to many solutions, practical advice, and R packages to implement more suitable models. Moreover, contributions to the literature are quickly bridging previously-distinct fields of applied statistical theory. However, the fast-moving and technical nature of the literature can be confusing. This is why I wrote these notes: To guide applied researchers to the right references and modelling choices without having to first read everything under the sun.
+The goal of these notes is to tie together related strands of literature that highlight the limitations of standard difference-in-differences methods (DiD) and propose corrections and new estimators. The interesting thing about this literature is that not only it develops extremely fast, but it accompanies a harsh critique of common modelling choices to novel solutions, practical advice, and R packages to implement more suitable models. Moreover, contributions to the literature are quickly bridging previously-distinct fields of applied statistical theory. However, the fast-moving and technical nature of the literature can be confusing. This is why I wrote these notes: To guide applied researchers to the right references and modelling choices without having to first read everything under the sun.
 
 Note that this document is meant to be a practical guide for advanced researchers with prior knowledge of statistics, basic causal inference designs and programming in \texttt{R}. It is by no means a technical paper, nor an introduction to any of these subjects. Also, the focus of this paper is on the different methods used to statistically estimate average treatment effects and not on the related ways to compute uncertainty measures. Applied scholars need to learn more about these through the original methods papers and the related R package documentation. Moreover, this note is limited to models dealing with binary treatments and does not cover related topics, such as developments of DiD estimators that drop standard sampling assumptions for design-based inference and the literature on event study models.
 
@@ -125,38 +114,37 @@ The notes proceed as follows. First, I give a brief overview of causal inference
 
 \section{Causality and Cross-Sectional Time-Series Data}
 
-The problem of estimating causal effects can be thought of as the challenge of predicting counterfactual outcomes. The impossibility of observing the outcome of a process if something (the treatment condition) had been different is often referred to as the \textit{fundamental problem of causal inference}. The Neymar-Rubin counterfactual outcome framework formalizes one way of thinking about causality in terms of counterfactuals. 
-
-\subsection{The Classic DiD Setup as a Motivating Example}
+The problem of estimating causal effects can be thought of as the challenge of predicting counterfactual outcomes. The impossibility of observing the outcome of a process had something (the treatment condition) been different is often referred to as the \textit{fundamental problem of causal inference}. The Neymar-Rubin counterfactual outcome framework formalizes one way of thinking about causality in terms of counterfactuals. 
 
 Consider an outcome of interest $Y_{it}$ that is observed for individual $i$ at time $t$. Also, consider a binary treatment $D_{it} \in \{ 0, 1 \}$. The individual causal effect of $D$ on $Y$ can be defined as 
 $$\text{ICE} = Y_{it}(1) - Y_{it}(0)$$
-meaning that the effect of $D$ is defined as the difference between the outcome that would result from treatment exposure $Y_{it}(1)$ and the one resulting from no treatment exposure $Y_{it}(0)$ (i.e., control status).
+meaning that the effect of $D$ is defined as the individualistic difference between the outcome that would result from treatment exposure $Y_{it}(1)$ and the one resulting from no treatment exposure $Y_{it}(0)$ (i.e., control status).
 
-However, since only one of the two terms is ever observed in reality at a given time and for a specific individual, statistical methods of causal inference find ways to estimate \textit{average causal effects} by predicting the counterfactual outcome under the unobserved treatment condition. In fact, while applied statistics are often divided between causal inference and prediction tasks, prediction is very much at the heart of causal inference methods, although with a strong focus on bias reduction a.k.a. unconfoundedness.
+However, since only one of the two terms is ever observed in reality at a given time and for a specific individual, it is extremely hard and noisy to estimate individual effects of policies. Statistical methods for causal inference find ways to estimate \textit{average causal effects} by predicting the counterfactual outcome under the unobserved treatment condition for a population in ways that ensure unbiased predictions \textit{on average}. It is interesting to note that while applied statistics are often divided between causal inference and prediction tasks, prediction is very much at the heart of causal inference methods, although with a strong focus on bias reduction a.k.a. unconfoundedness.
 
-Let's consider the classic two-period DiD setup and how it can be thought of as a prediction exercise. The outcome is assumed to be a continuous variable $Y_{it}$ observed over two periods $t=1, 2$, whereas the treatment is assumed to be a dichotomous variable $D_{it} = 0, 1$. The observed value of the outcome can be expressed as:
+
+\subsection{The Classic DiD Setup as a Motivating Example}
+
+Let's consider the classic two-period DiD setup and how it can be thought of as a prediction exercise. The outcome is assumed to be a continuous variable $Y_{it}$ observed over two periods $t=1, 2$. The treatment is assumed to be dichotomous, to take value $0$ for all units at period $t=1$, and value $1$ for some units at time $t=2$. The observed value of the outcome at any given time can be expressed in terms of counterfactual terms as:
 $$ Y_{it} = Y_{it}(1)D_{it} + Y_{it}(0)(1 - D_{it}) $$
-The major contribution of the classic DiD literature \parencite[e.g.,][]{Angrist2009} is to demonstrate that under SUTVA\footnote{The \textit{stable unit treatment value assumption} is a set of assumptions such that: i) units composition does not change over time, ii) no treatment heterogeneity exists, iii) no treatment spillovers take place.} assumptions the average treatment effect on the treated (ATT) can be defined as
+In this setting one might describe the average treatment effect on the treated (ATT) as
 $$ \tau = E(Y_{it} (1) - Y_{it}(0) | D_{it} = 1). $$
 
-Once again, $\tau$ contains unobserved values. In order to estimate the ATT, one needs another assumption of so-called parallel trends. Parallel trends suggest that the individual \textit{change} in outcome under control between $t = 1, t= 2$ is independent of treatment status and can be expressed as
+Once again, $\tau$ contains unobserved values in the counterfactual outcomes $Y_{it}(0) | D_{it} = 1$. The major contribution of the classic DiD literature \parencite[e.g.,][]{Angrist2009} is to demonstrate that under parallel trend and SUTVA\footnote{The \textit{stable unit treatment value assumptions} is a set of assumptions such that: i) units composition does not change over time, ii) no treatment heterogeneity exists, iii) no treatment spillovers take place.} assumptions it is possible estimate the unbiased ATT. Parallel trends suggest that the individual \textit{change} in outcome under control between $t = 1, t= 2$ is independent of treatment status and can be expressed as
 $$ E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 1) = E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0). $$
-Note that a major strength of DiD designs is that \textit{they do not rule out selection bias per se}, but only rule out differential selection into treatment between treated and control group.
+Note that a major strength of DiD designs is that \textit{they do not rule out selection bias per se}, but only rule out differential selection into treatment between treated and control group. This makes DiD a very flexible and relatively reasonable way of thinking at applied settings where units are observed repeatedly and only part of the population is treated.
 
-Thus, if applied scholars are willing to assume the existence of parallel trends it is possible to statistically identify the ATT as
-$$ \tau = E(Y_{it}(1) - E(Y_{it}(0)).$$
-
-The parallel trend assumption is key to understand how DiD estimators predict counterfactuals. In fact, by assuming that the trends in the outcome under control are independent from the realized treatment we justify taking the average change in outcome in the control group $E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0)$ as the trend that the treated units would have had, had they not been treated. Then it becomes easy to make a linear prediction of the counterfactual outcomes under no-treatment condition for the treated units with observed data. It is sufficient to add the control units' trend to the outcome of the treated units at $t=1$:
+The parallel trend assumption is key to understand how DiD estimators predict counterfactuals. In fact, by assuming that the trends in the outcome under control are independent from the realized treatment we justify taking the average change in outcome in the control group $E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0)$ as the trend that the treated units would have had, had they not been treated. Then it becomes easy to make a linear prediction of the counterfactual outcomes under no-treatment condition for the treated units using observed data. It is sufficient to add the control units' trend to the outcome of the treated units at $t=1$:
 $$ E(Y_{i2}(0) | D_{it} = 1) = E(Y_{i1} | D_{it} = 1) + \left[ E(Y_{i2} (0) - Y_{i1}(0) | D_{it} = 0) \right] .$$
 
 \subsection{Causal Inference as a Prediction Problem}
 
-Once the identification of ATTs with DiD methods is thought of as a prediction problem it becomes easier to see the link between DiD and other CSTS estimators such as the synthetic control method (SCM) \parencite{Abadie2010}. In fact, as suggested by \textcite{Roth2022} the two literatures are getting closer to one another. The differences between SCM and DiD are mostly down to data requirement and the way counterfactual outcomes are estimated. In its original formulation, SCM only allows to have one treated unit (usually a state-like political unit), provides a transparent selection of the donor pool, i.e. the units that make up the control group. On the other hand, DiD designs ideally require large population of individuals, where less emphasis is placed on control group selection. Moreover,
+Once the identification of ATTs with DiD methods is thought of as a prediction problem it becomes easier to see the link between DiD and other CSTS estimators such as the synthetic control method (SCM) \parencite{Abadie2010}. In fact, as suggested by \textcite{Roth2022} the two literatures are getting closer to one another. The differences between SCM and DiD are mostly down to data requirement and the way counterfactual outcomes are estimated. In its original formulation, SCM only allows to have one treated unit (usually a state-like political unit), provides a transparent selection of the donor pool, i.e. the units that make up the control group. On the other hand, DiD designs ideally require large population of individuals, where less emphasis is placed on control group selection. I discuss the SCM more below.
 
-Now, in the basic two-period setting there are multiple ways of estimating $\tau$, all of which produce equivalent estimates because difference-in-means are always linear over two periods. One might use a non-parametric approach my estimating a difference in means as done in the classic \textcite{Card1990} paper. Alternatively, one might use a two-way fixed effects regression (TWFE) or a first-difference regression which both have the advantage of producing measures of statistical uncertainty \parencite{Angrist2009}.
+Another family of methods that causal-inference-as-prediction helps linking to DiD is matching. \textcite{Imai2021} ingeniously re-define estimation in DiD settings as a problem of choosing the right control group for counterfactuals estimation. They propose an R package with a set of tools to improve estimation of ATTs by explicitly defining the criterions for being an appropriate control unit in observational settings. As we'll see further down, getting the control group right can be complicated in DiD settings that go beyond the classic setup.
 
-However, as soon as one's case of interest goes beyond this simple setup, the assumptions and common estimation methods for the ATT start to be violated. Next, I discuss some of the major problems identified by the literature and touch on the solutions out there.
+In fact, as soon as one's case of interest goes beyond this simple setup the assumptions and common estimation methods for the ATT start to be violated, with various identification problems and biases arising in the process. The next section discusses some of the major problems identified by the literature and touch on the solutions out there.
+
 
 \section{When the Basic DiD Design Breaks Down}
 
@@ -170,20 +158,22 @@ The simplest violation of the basic DiD setup emerges when units are observed fo
 \subsection{Treatment Timing}
 
 % staggered adoption
-The most significant result in the recent literature on CSTS estimators, and probably the one that contributed the most to its quick development, is the demonstration that the TWFE estimator is a biased estimator of $\tau$ in the common setting of \textit{staggered treatment adoption}. Whenever treated units are not exposed to treatment at the same point in time, but rather adopt treatment in several cohorts, the TWFE estimate of $\hat{\tau}$ is biased towards zero \parencite{GoodmanBacon2021, Callaway2021}. Researchers demonstrated that TWFE estimates are a weighted average of DiD estimates comparing all pairs of treatment statuses and cohorts. The major issue is that some comparisons are undesirable, meaning that they use already-treated cohorts as counterfactual for other treated units. A second problem is that some of the cohort-effects' weights are negative, which creates problem with the interpretation of the aggregate estimate of $\hat{\tau}$. 
+The most significant result in the recent literature on CSTS estimators, and probably the one that contributed the most to its quick development, is the demonstration that the TWFE estimator is a biased estimator of $\tau$ in the common setting of \textit{staggered treatment adoption}. Actually, most contributions to the literature confront the problems related to staggered adoption \parencite[see][]{Chaisemartin2022}.
+
+Researchers demonstrated that TWFE estimates are a weighted average of DiD estimates comparing all pairs of treatment statuses and cohorts. Whenever treated units are not exposed to treatment at the same point in time, but rather adopt treatment in several cohorts, several problems negatively affect the estimate of both aggregate  \parencite{GoodmanBacon2021, Callaway2021, Chaisemartin2022} and "dynamic" or event-study ATTs \parencite{Sun2021}. Fortunately, the TWFE estimate of $\hat{\tau}$ is generally biased towards zero.
+
+The first issue with the TWFE estimates of ATTs in staggered settings is that some DiD comparisons are undesirable, meaning that already-treated cohorts serve as counterfactual for other treated units. Since TWFE aggregates all possible DiD comparisons, some of them have inappropriate control units as they were exposed to treatment in the past. This leads TWFE to under-appreciate the effect of treatment as some control units have their outcomes affected by treatment.
+
+A second problem is that some of the cohort-effects' weights can be problematic. \textcite{GoodmanBacon2021} shows that the weight attributed to cohort effects are proportional to cohort size and the variance of $D_{it}$ in a cohort. This means that treatment effects on early and late treated cohorts are weighted less. Moreover, TWFE weights of cohort average effects can be negative, which creates problem with the interpretation of the aggregate estimate $\hat{\tau}$. 
 
 There are various solutions to the weighting and comparison problems, which are solved either by setting constraints on group weights, or by explicitly selecting the control group before estimation. The available options are explained below.
 
 \subsection{Violations of Parallel Trends}
 
 % non-parallel trends
-The assumption of parallel trends is hard to motivate, and impossible to prove. There are common tests for the existence of pre-treatment trends, like the common event study plots where the outcome is regressed onto lags and leads of the treatment. However, recent studies demonstrated that these tests are underpowered when it comes to rejecting the presence of pre-trends. In fact, there is a growing literature just on this issue, but I won't go into it in this note.
+The assumption of parallel trends is hard to motivate, and impossible to prove. There are common tests for the existence of pre-treatment trends, like the common event study plots where the outcome is regressed onto lags and leads of the treatment. However, recent studies demonstrated that these tests are underpowered when it comes to rejecting the presence of pre-trends. In fact, there is a growing literature just on this issue, but I won't go into it in this note (see literature on ``further topics.''
 
-That said, scholars proposed ways to estimate consistent ATTs when parallel trends are valid conditional on a set of covariates \parencite{SantAnna2020}. The authors proposed a family of estimators that have desirable properties when either the outcome model or the covariate set are correctly specified.
-
-% effect heterogeneity
-
-% spillovers and anticipation
+That said, scholars proposed ways to estimate consistent ATTs when parallel trends are valid conditional on a set of covariates \parencite{SantAnna2020}. The authors proposed a family of ``doubly robust'' estimators that have desirable properties when either the outcome model or the covariate set are correctly specified.
 
 % non-absorption state
 A treatment is referred to as being in an absorbing state whenever units that are treated cannot revert to being untreated. This is very common in many policy areas, but it does also not apply to many phenomena political scientists want to know the effects of. In fact, there are multiple phenomena in which units can be treated repeatedly over time. There are various problems with repeated and non-absorbing treatments, the major of which is the selection into (repeated) treatment that might bias estimates. However, scholars proposed various methods that allow to deal with these problems, although at the expense of more demanding assumptions.
@@ -192,16 +182,27 @@ A treatment is referred to as being in an absorbing state whenever units that ar
 Finally, one might wonder how DiD designs might be extended to continuous treatment settings. While \textcite{Angrist2009} suggest that the type of treatment does not influence the estimand or estimation quantity, \textcite{Callaway2021} demonstrate that continuous treatments make settings with staggered adoption and non-heterogeneous effects extremely hard to handle, as well as deserving a complicated notation. In short, there does not seem to be a set of simple tools and guidelines to be employed in DiDs with continuous outcomes.
 
 
+\subsection{Other Assumption Violations}
+
+
+% effect heterogeneity
+As part of SUTVA DiD estimators generally assume homogeneous effects of treatment, meaning that all individual ITE derives from the same distribution. This can be problematic in cases of staggered adoption or underlying and unobserved characteristics of the treatment or treated unit. \textcite{GoodmanBacon2021} and many others describe the consequences of treatment heterogeneity across cohorts for TWFE estimates, usually suggesting that more flexible specifications that compute event-study-like average treatment effects for cohorts or post-treatment periods are less affected by treatment heterogeneity.
+
+% spillovers and anticipation
+Multi-period DiD settings are also more prone to violation of the assumptions of constant treatment effects and of no carryover effect \parencite[i.e. past treatments affect current outcomes][]{Liu}. The assumption of no-carryover effect is generally of less concern if one is interested in the effect of an intervention over the whole observed period, but much more in event-study settings or when the treatment status is allowed to reverse.
+
+
 \section{Which CSTS Model is Right for You?}
 
 Let's turn to a very applied guide to the right modelling choice depending on one's variation of interest. Note that this typology is strictly limited to binary treatment settings.
 
 \subsection{Number of Treated Units and the Synthetic Control Method}
 
-The first modelling choice is dictated by whether a scholar is interested in the effect of an intervention that treated one (or few) aggregate unit. In this case, the standard synthetic control method (SCM) allows to model the counterfactual outcome of the treated unit flexibly and with extensive diagnostic tools. The idea behind the SCM is to build a model of $Y_{it}(0)\ | \ D=1$ from a pool of untreated units (the ``donor pool''). The model is tuned on the pre-treatment period, and then used to predict the treated units' outcomes under no-treatment status.
+The first modelling choice is dictated by whether a scholar is interested in the effect of an intervention that treated one (or few) aggregate unit. In this case, the standard synthetic control method (SCM) allows to model the counterfactual outcome of the treated unit flexibly and with extensive diagnostic tools. The idea behind the SCM is to build a model of $Y_{it}(0)\ | \ D=1$ from a pool of untreated units (the ``donor pool''). The model is tuned on the pre-treatment period, and then used to predict the treated units' outcomes under no-treatment counterfactual.
 
-The data requirements for ATT estimates with the SCM are i) a sufficiently long pre-treatment period to fit the synthetic control observation, ii) a sufficiently large donor pool of comparable units, iii) the treated unit's outcomes must be within the control units' common support, i.e. the treated unit cannot have outcomes more extreme than the control group. Additionally, SUTVA assumptions hold, which can be hard to assess especially when it comes to the absence of spillovers.
-Note that a recent development of SCM by \textcite{BenMichael2021} suggests that by fitting a regularized outcome model it is possible to make valid predictions of counterfactual outcomes even when the treated unit is outside of the donors' common support.
+The data requirements for ATT estimates with the SCM are i) a sufficiently long pre-treatment period to fit the synthetic control observation, ii) a sufficiently large donor pool of comparable units, iii) the treated unit's outcomes must be within the control units' common support, i.e. the treated unit cannot have outcomes more extreme than the control group. Note that a recent development of SCM by \textcite{BenMichael2021} suggests that by fitting a regularized outcome model it is possible to make valid predictions of counterfactual outcomes even when the treated unit is outside of the donors' common support.
+Additionally, SUTVA assumptions must hold, which can be hard to assess especially when it comes to the absence of spillovers.
+
 
 There are currently two R packages for SCM analyses and one for \citeauthor{BenMichael2021}'s ``augmented'' SCM: \texttt{tidysynth}, \texttt{Synth}, \texttt{augsynth}.
 
@@ -211,8 +212,9 @@ There are currently two R packages for SCM analyses and one for \citeauthor{BenM
 \caption{Heuristic tree of CSTS methods.}
     \Tree[. [.{N. treated units > 1} [.{T = 2} {Classic DiD\\ (Sec. 4.2)} ]
                            [.{T > 2} [.{Non-absorbing state\\ treatment} { {\texttt{GSC} (Sec. 4.43)}\\ {\texttt{fect} (Sec. 4.42)}\\ {\texttt{PanelMatch} (Sec. 4.43)} } ]
-                                     [.{Absorbing-state\\ treatment} [.{Heterogeneity, spillovers,\\ staggered adoption} ]
-                                                                      [.{Classic DiD with multiple\\ periods (Sec 4.3)} ]]]]
+                                     [.{Absorbing-state\\ treatment} 
+                                                                      [.{Staggered\\ treatment}  { \texttt{did, did2s,}\\ \texttt{didimputation},\\ \texttt{DRDID, fixest},\\ \texttt{wfe} (Sec. 4.3.1-2)} ]
+                                                                      [.{Contemporaneous\\ treatment} {Classic DiD with multiple\\ periods (Sec 4.3.1)} ]]]]
             [.{N. treated units = 1} [.{SCM\\ (Sec. 4.1)} ]]
           ]
 \end{figure}
@@ -297,8 +299,18 @@ The three models are statistically equivalent for the estimation of ATT because 
 
 In settings where the scholar observes the units over multiple periods it is important to separate the cases of absorbing state-treatments, i.e. those in which treated units remain treated after exposure, and those that do not. Next, I discuss the simplest case and the one covered by much of the econometric literature on DiD, that is absorbing-state treatment settings.
 
-In this family of settings, the first distinction to be made concerns whether the scholar believes that the basic DiD assumptions (no effect heterogeneity, synchronous treatment, parallel trends, no anticipation) hold in a specific case. If these all hold, and the units are only observed for few extra periods before and after treatment, then in principle the TWFE approach returns the unbiased ATT. However, some of the assumptions are impossible to test and therefore it is worth running tests and alternative estimations that are robust to violations of the basic DiD setup.
-In particular, multi-period DiD settings are more prone to violation of the assumptions of constant treatment effects and of no carryover effect \parencite[i.e. past treatments affect current outcomes][]{Liu}.
+
+\subsubsection{Contemporaneous or Staggered Adoption}
+
+In this family of settings, the first distinction to be made concerns whether the scholar believes that the basic DiD assumptions (contemporaneous treatment, no effect heterogeneity, synchronous treatment, parallel trends, no anticipation) hold in a specific case. If these all hold, and in particular if all treated units are exposed to treatment at the same time, then in principle the TWFE approach returns the unbiased ATT. However, some of the assumptions are impossible to test and therefore it is worth running tests and alternative estimations that are robust to violations of the basic DiD setup.
+
+In particular, DiD in settings with staggered adoption almost always present the weighting and comparison problems introduced above.
+Starting from the comparison problem, scholars proposed ways to limit estimates to ``clean'' comparisons. This usually entails transitioning from a single-stage estimation as in TWFE regressions to more complicated procedures. For instance, \textcite{Gardner} and \textcite{Callaway2021} propose to estimate treatment-cohort specific ATTs. In the first stage is also possible to choose whether to use never-treated or not-yet-treated observations as control group.
+These cohort-specific estimates are free from comparison issues and can then be aggregated in different ways to estimate treatment period, cohort, or overall ATTs depending on the researcher's goals. 
+Similarly, multiple-stage estimation helps solve the implicit weighting problem of TWFE by explicitly setting unitary or other weights on each cohort-ATT.
+
+Estimation for DiDs with staggered adoption is implemented in multiple packages, each with its own perks and quirks: \texttt{did, did2s, didimputation, DRDID, fixest, wfe}. Probably the most important differences among packages regard available specification tests, covariate adjustment and ability to aggregate effects.
+
 
 \subsubsection{Failure of Parallel Trends Assumption}
 
@@ -309,9 +321,7 @@ One reason for the violation of the parallel trend assumption might be that the 
 Another case that might undermine parallel trends is the staggered treatment adoption, whereby TWFE mechanically produce unwanted comparisons. The solutions to this problem are described below.
 
 Finally, it might be the case that potential outcomes of treated and control observations really follow parallel trends, but only conditional on some covariates. In such cases \textcite{SantAnna2020} propose ways to estimate consistent and efficient ATTs conditional on the correct covariate specifications by reweighting units based on the propensity score. The method is implemented in the \texttt{DRDID} package.
-
-\subsubsection{Staggered Adoption}
-
+\textcite{Callaway2021} propose a way to condition parallel trends on time-invariant covariates implemented in the \texttt{did} package.
 
 
 \subsection{Non-Absorbing Treatments and Their Estimators}
@@ -353,13 +363,13 @@ However, these advantages come at significant costs. First, PanelMatch requires 
 	\toprule
 	Method & Treated $N$ & Staggered & Exogeneity & Heterogeneity rob. & Treatment & Functional form & Controls & Autocorr./spillovers & Data needs \\
 	\midrule
-	TWFE & $N >= 1$ & No & Strict & No & Absorbing &  &  &  &  \\	
-	SCM & $N = 1$ & -- & Relaxed & Yes & Absorbing &  &  &  &  \\	
-	GSCM & $N >= 10$ & Yes & Relaxed & Yes & Non-Absorbing &  &  &  &  \\	
-	fect & $N >= 1$ & Yes & Relaxed & Yes & Non-Absorbing &  &  &  &  \\	
-	PanelMatch & $N >= 1$ & Yes & Rep. ignorability & Yes & Non-Absorbing &  &  &  &  \\	
-	Two-stage DiD & $N >= 1$ & Yes & Strict & Absorbing &  &  &  &  &  \\	
-	&  &  &  &  &  &  &  &  &  \\
+	TWFE & $N >= 1$ & No & Strict & No & Absorbing & Linear & Yes &  &  \\	
+	SCM & $N = 1$ & -- & Relaxed & Yes & Absorbing & Nonlinear & Yes &  &  \\	
+	GSCM & $N >= 10$ & Yes & Relaxed & Yes & Non-Absorbing & Nonlinear & Yes &  &  \\	
+	fect & $N >= 1$ & Yes & Relaxed & Yes & Non-Absorbing & Nonlinear* & Yes &  &  \\	
+	PanelMatch & $N >= 1$ & Yes & Rep. ignorability & Yes & Non-Absorbing & Nonlinear & Yes &  &  \\	
+	Two-stage DiD & $N >= 1$ & Yes & Strict & Yes & Absorbing & Linear & Yes &  &  \\	
+	did & $N >= 1$ & Yes & Strict & Yes & Absorbing & Linear & Yes &  &  \\
 	\bottomrule
     \end{tabular}
 \end{sidewaystable}

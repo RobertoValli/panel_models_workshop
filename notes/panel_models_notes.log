@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  3 JAN 2023 22:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  16 JAN 2023 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -49,17 +49,26 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
-) (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+) (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 149.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
 
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex-dev/graphics\mathcolor
-.ltx)) (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.s
-ty
+.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip49
 \fb@frw=\dimen141
@@ -839,31 +848,31 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-1.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
+0.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (panel_models_notes.aux)
 \openout1 = `panel_models_notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
 
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
@@ -930,8 +939,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'panel_models_notes.bbl' found.
 (panel_models_notes.bbl)
-Package biblatex Info: Reference section=0 on input line 111.
-Package biblatex Info: Reference segment=0 on input line 111.
+Package biblatex Info: Reference section=0 on input line 100.
+Package biblatex Info: Reference segment=0 on input line 100.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -969,91 +978,85 @@ Package biblatex Info: Reference segment=0 on input line 111.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 111.
+Package hyperref Info: Link coloring OFF on input line 100.
 (panel_models_notes.out) (panel_models_notes.out)
 \@outlinefile=\write4
 \openout4 = `panel_models_notes.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-14.
+03.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-14.
+03.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-114.
+103.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-114.
+103.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 114.
+(Font)              <17.28> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 114.
+(Font)              <12> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 114.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 114
+(Font)              <10> on input line 103.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 103
 .
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 114
+LaTeX Font Info:    Trying to load font information for U+msb on input line 103
 .
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-14.
+03.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 114.
+(Font)              <8> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 114.
+(Font)              <6> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 114.
+(Font)              <5> on input line 103.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-21.
+10.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
 {C:/Users/vallir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 132.
-[2] [3] [4]
+(Font)              <7> on input line 119.
+[2] [3] [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 212.
-
-Overfull \hbox (5.22617pt too wide) in paragraph at lines 212--218
-[] [] 
- []
-
-[5]
-Package color Info: Redefining color shadecolor on input line 229.
+(Font)              <9> on input line 213.
+[6]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 232.
-[6] [7] [8] [9] [10] [11] (panel_models_notes.aux)
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 234.
+[7] [8] [9] [10] [11] [12] (panel_models_notes.aux)
 Package rerunfilecheck Info: File `panel_models_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 4F465817D5720F187CF79D9AAA561F9B;4544.
+(rerunfilecheck)             Checksum: EC17FDCC83D1AD2C357EC9231922C727;4844.
 Package logreq Info: Writing requests to 'panel_models_notes.run.xml'.
 \openout1 = `panel_models_notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22421 strings out of 478032
- 401155 string characters out of 2827995
- 1213768 words of memory out of 3000000
- 40774 multiletter control sequences out of 15000+600000
+ 22830 strings out of 478032
+ 405818 string characters out of 2827995
+ 1226237 words of memory out of 3000000
+ 41177 multiletter control sequences out of 15000+600000
  553483 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,11n,70p,1479b,5043s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1083,9 +1086,9 @@ C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
 <C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
 <C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pf
 b>
-Output written on panel_models_notes.pdf (11 pages, 493279 bytes).
+Output written on panel_models_notes.pdf (12 pages, 502672 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 348 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
