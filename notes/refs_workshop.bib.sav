@@ -21,7 +21,7 @@
 }
 
 @Article{Chaisemartin2020,
-  author  = {de Chaisemartin, Cl{\'e}ment and D'Haultf{\oe}uille, Xavier},
+  author  = {de Chaisemartin, Clément and D'Haultfœuille, Xavier},
   journal = {American Economic Review},
   title   = {{Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects}},
   year    = {2020},
@@ -65,7 +65,7 @@
 }
 
 @Misc{Chaisemartin2020a,
-  author    = {de Chaisemartin, Cl{\'e}ment and D'Haultf{\oe}uille, Xavier},
+  author    = {de Chaisemartin, Cl{\'e}ment and D'Haultfœuille, Xavier},
   title     = {{Two-way Fixed Effects Regressions with Several Treatments}},
   year      = {2020},
   copyright = {arXiv.org perpetual, non-exclusive license},

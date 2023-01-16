@@ -105,13 +105,7 @@
 	 \textit{Workshop Notes}
 }
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## [1] 0
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
+
 
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
@@ -120,13 +114,14 @@
 
 \section{Introduction}
 
-Political science is often characterized by research questions that cannot be studied experimentally because ethical or practical reasons prevent treatment manipulation. The impossibility of using true randomization in polisci research makes all the more important to find alternative ways to estimate causal effects of policies and other interventions. These notes discuss recent developments in a specific family of statistical methods that exploit within and across-unit variation over time to approximate estimates of causal effects. 
+Political science is often characterized by research questions that cannot be studied experimentally because ethical or practical reasons prevent administration of theoretically relevant treatments. The frequent impossibility of using true randomization in polisci research makes all the more important to find alternative ways to estimate causal effects of policies and other interventions. These notes discuss recent developments in a specific family of statistical methods that exploit within and across-unit variation over time to estimate counterfactual outcomes, and thereby approximate estimates of average causal effects. 
 
-The goal of these notes in to tie together a recent literature that highlights the limitations of standard difference-in-differences methods (DiD) when it comes to estimating causal effects in complex settings that violate its basic assumptions. The interesting thing about this literature is that not only it develops extremely fast, but it accompanies a harsh critique of common modelling choices to many solutions, practical advice, and R packages to implement more suitable models. However, the fast-moving and technical nature of the literature can be confusing. This is why I wrote these notes, to guide applied researchers to the right references and modelling choices without having to first read everything under the sun.
+The goal of these notes is to tie together related strands of literature that highlight the limitations of standard difference-in-differences methods (DiD) and propose corrections and new estimators. The interesting thing about this literature is that not only it develops extremely fast, but it accompanies a harsh critique of common modelling choices to many solutions, practical advice, and R packages to implement more suitable models. Moreover, contributions to the literature are quickly bridging previously-distinct fields of applied statistical theory. However, the fast-moving and technical nature of the literature can be confusing. This is why I wrote these notes: To guide applied researchers to the right references and modelling choices without having to first read everything under the sun.
 
-Note that this document is meant to be a practical guide for advanced researchers with prior knowledge of statistics, basic causal inference designs and programming in \texttt{R}. It is by no means a technical paper, nor an introduction to any of these subjects. Also, the focus of this paper is on the different methods used to statistically estimate average treatment effects and not on the related ways to compute uncertainty measures. Applied scholars need to learn on these through the original methods papers and the related R package documentation. Moreover, this note does not cover related topics, such as developments of DiD estimators that drop standard sampling assumptions for design-based inference and the literature on event study models.
+Note that this document is meant to be a practical guide for advanced researchers with prior knowledge of statistics, basic causal inference designs and programming in \texttt{R}. It is by no means a technical paper, nor an introduction to any of these subjects. Also, the focus of this paper is on the different methods used to statistically estimate average treatment effects and not on the related ways to compute uncertainty measures. Applied scholars need to learn more about these through the original methods papers and the related R package documentation. Moreover, this note is limited to models dealing with binary treatments and does not cover related topics, such as developments of DiD estimators that drop standard sampling assumptions for design-based inference and the literature on event study models.
 
-The notes proceed as follows. First, I give a brief overview of causal inference methods with cross-sectional time-series data (CSTS) and its limitations. I start from the standard DiD model and its estimators, and walk through its critique in the literature. Second, I present a heuristic decision model to select the right CSTS method based on one's data. Third, I provide a description of various methods, their assumptions and implementation in \texttt{R}.
+The notes proceed as follows. First, I give a brief overview of causal inference methods with cross-sectional time-series data (CSTS) and its limitations. I start from the standard DiD model and its estimators (Section 2), and walk through some of its critique in the literature (Section 3). Next, I present a heuristic decision model to select the right CSTS method based on one's data structures. Then I provide a description of various methods, their assumptions and implementation in \texttt{R}, and conclude with some remarks and a summary table of each method's features.
+
 
 \section{Causality and Cross-Sectional Time-Series Data}
 
@@ -136,22 +131,24 @@ The problem of estimating causal effects can be thought of as the challenge of p
 
 Consider an outcome of interest $Y_{it}$ that is observed for individual $i$ at time $t$. Also, consider a binary treatment $D_{it} \in \{ 0, 1 \}$. The individual causal effect of $D$ on $Y$ can be defined as 
 $$\text{ICE} = Y_{it}(1) - Y_{it}(0)$$
+meaning that the effect of $D$ is defined as the difference between the outcome that would result from treatment exposure $Y_{it}(1)$ and the one resulting from no treatment exposure $Y_{it}(0)$ (i.e., control status).
 
-However, since only one of the two terms is ever observed in reality, statistical methods of causal inference find ways to estimate \textit{average causal effects} by predicting the counterfactual outcome under the unobserved treatment condition. In fact, while applied statistics are often divided between causal inference and prediction tasks, prediction is very much at the heart of causal inference methods, although with a strong focus on bias reduction.
+However, since only one of the two terms is ever observed in reality at a given time and for a specific individual, statistical methods of causal inference find ways to estimate \textit{average causal effects} by predicting the counterfactual outcome under the unobserved treatment condition. In fact, while applied statistics are often divided between causal inference and prediction tasks, prediction is very much at the heart of causal inference methods, although with a strong focus on bias reduction a.k.a. unconfoundedness.
 
 Let's consider the classic two-period DiD setup and how it can be thought of as a prediction exercise. The outcome is assumed to be a continuous variable $Y_{it}$ observed over two periods $t=1, 2$, whereas the treatment is assumed to be a dichotomous variable $D_{it} = 0, 1$. The observed value of the outcome can be expressed as:
-$$ Y_{it} = Y_{it}(1)D_{it} + Y_{it}(0)D_{it} $$
+$$ Y_{it} = Y_{it}(1)D_{it} + Y_{it}(0)(1 - D_{it}) $$
 The major contribution of the classic DiD literature \parencite[e.g.,][]{Angrist2009} is to demonstrate that under SUTVA\footnote{The \textit{stable unit treatment value assumption} is a set of assumptions such that: i) units composition does not change over time, ii) no treatment heterogeneity exists, iii) no treatment spillovers take place.} assumptions the average treatment effect on the treated (ATT) can be defined as
-$$ \tau = E(Y_{it} (1) - Y_{it}(0) | D_{it} = 1) $$
+$$ \tau = E(Y_{it} (1) - Y_{it}(0) | D_{it} = 1). $$
 
-Under the additional assumption of so-called parallel trends, meaning that the individual \textit{change} in outcome under control between $t = 1, t= 2$ is independent of treatment status, i.e.
-$$ E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 1) = E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0) $$
-it is possible to statistically identify the ATT as
+Once again, $\tau$ contains unobserved values. In order to estimate the ATT, one needs another assumption of so-called parallel trends. Parallel trends suggest that the individual \textit{change} in outcome under control between $t = 1, t= 2$ is independent of treatment status and can be expressed as
+$$ E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 1) = E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0). $$
+Note that a major strength of DiD designs is that \textit{they do not rule out selection bias per se}, but only rule out differential selection into treatment between treated and control group.
 
-$$ \tau = E(Y_{it}(1) - E(Y_{it}(0))$$
+Thus, if applied scholars are willing to assume the existence of parallel trends it is possible to statistically identify the ATT as
+$$ \tau = E(Y_{it}(1) - E(Y_{it}(0)).$$
 
-The parallel trend assumption is key to understand how DiD estimators predict counterfactuals. In fact, by assuming that the trends in the outcome under control are independent by the realized treatment we justify taking the average change in outcome in the control group $E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0)$ as the trend that the treated units would have had, had they not been treated. Then it becomes easy to make a linear prediction of the counterfactual outcomes under no-treatment condition for the treated units with observed data. It is sufficient to add to the outcome of the treated units at $t=1$ the control units' trend
-$$ E(Y_{i2} | D_{it} = 1) = E(Y_{i1}(0) | D_{it} = 1) + \left[ E(Y_{i2} (0) - Y_{i1}(0) | D_{it} = 0) \right] $$
+The parallel trend assumption is key to understand how DiD estimators predict counterfactuals. In fact, by assuming that the trends in the outcome under control are independent from the realized treatment we justify taking the average change in outcome in the control group $E(Y_{i2} (1) - Y_{i1}(0) | D_{it} = 0)$ as the trend that the treated units would have had, had they not been treated. Then it becomes easy to make a linear prediction of the counterfactual outcomes under no-treatment condition for the treated units with observed data. It is sufficient to add the control units' trend to the outcome of the treated units at $t=1$:
+$$ E(Y_{i2}(0) | D_{it} = 1) = E(Y_{i1} | D_{it} = 1) + \left[ E(Y_{i2} (0) - Y_{i1}(0) | D_{it} = 0) \right] .$$
 
 \subsection{Causal Inference as a Prediction Problem}
 
