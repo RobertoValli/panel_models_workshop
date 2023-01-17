@@ -9,11 +9,11 @@ The way I think of this workshop is to have a unified look at recent methods tha
 The workshop is not meant to be a complete course on causal inference, so it makes some assumptions on the participant's prior knowledge. First, it requires confidence with basic linear regression stats and an introduction to causal inference based on the so-called *Neymar-Rubin counterfactual outcomes framework*. For a refresher on the latter, see [this post](https://www.causalconversations.com/post/po-introduction/). 
 
 Second, it requires participants to have read **at least** my [notes on the literature](notes/panel_models_notes.pdf), which are meant to guide you through the sometimes bewildering array of alternative methods. 
-However, for a better and slightly more technical understanding of recent literature, I **highly** recommend reading the great review paper by [Roth et al.](literature/recommended reading/roth_et_al_2022.pdf) in the "recommended readings" folder.
+However, for a better and slightly more technical understanding of recent literature, I **highly** recommend reading the great review paper by [Roth et al.](literature/recommended_readings/roth_et_al_2022.pdf) in the "recommended readings" folder.
 
 ## Workshop structure
 
-The workshop is centered around a select number of papers that highlight deficiencies of difference-in-differences models in certain settings and suggest extensions to the standard model. After a brief overview of the literature and a dust-off of the basic DiD model, we go through the main violations of basic DiD assumptions, and the alternative methods designed to deal with them.
+The workshop's content is centered around a select number of papers that highlight deficiencies of difference-in-differences models in certain settings and suggest extensions to the standard model. After a brief overview of the literature and a dust-off of our knowledge of the basic DiD model, we go through the main violations of basic DiD assumptions, and the alternative methods designed to deal with them.
 
 In the second part, participants are welcome to bring their own CSTS data applications. Together we might brainstorm and discuss which methods are more appropriate for the data, what assuptions might be necessary to make them work, and what R package exist to implement them.
 
@@ -23,7 +23,7 @@ The workshop's contents are the following:
 - Quick dust-off of basic DiD model
 - The DiD assumptions violation tree
 - Discussion of selected methods (with R examples):
-  - Staggered treatment adoption
-  - Repeated treatment
+  - Linear DiDs with staggered treatment adoption
+  - Flexible methods for repeated/revesable treatment exposure
 - Bring your own problems: Brainstorming data and methods
 - Conclusion: Is there a new standard?
