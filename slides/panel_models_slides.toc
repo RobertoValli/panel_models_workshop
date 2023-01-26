@@ -1,1 +1,7 @@
-\beamer@sectionintoc {1}{Basic DiD Dust-Off}{1}{0}{1}
+\babel@toc {american}{}\relax 
+\beamer@sectionintoc {1}{Introduction}{1}{0}{1}
+\beamer@sectionintoc {2}{Basic DiD Dust-Off}{4}{0}{2}
+\beamer@sectionintoc {3}{Limitations of basic DiD setting }{10}{0}{3}
+\beamer@sectionintoc {4}{New Approaches to DiD}{12}{0}{4}
+\beamer@sectionintoc {5}{Your Turn!}{22}{0}{5}
+\beamer@sectionintoc {6}{Wrap-up}{24}{0}{6}

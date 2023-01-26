@@ -1,4 +1,4 @@
-\documentclass[11pt,aspectratio=169]{beamer}
+\documentclass[12pt,aspectratio=169]{beamer}
 
 % Define the theme
 \usepackage[sfmath]{kpfonts}
@@ -8,19 +8,198 @@ titleformat=smallcaps,
 titleformat section=smallcaps,
 numbering=fraction]{metropolis}
 
-\usepackage{tabularx}
+
+% Load some packeges
+\usepackage{appendixnumberbeamer}
+\usepackage{dsfont}			% math font for ``double-bar'' ones
 \usepackage{booktabs}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{stackrel}
-\usepackage{geometry}
-\usepackage{booktabs}
+\usepackage{threeparttable, enumitem}
+\usepackage{rotating}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{bbding}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{amssymb, amsmath}
+
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+% Package for fitting big tables to the slide
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{enumitem}
+
+% Use American English APA quotations
+\usepackage[american]{babel}     
+\usepackage{csquotes}
+\usepackage[
+style=apa,
+backend=biber,
+maxcitenames=2,		
+]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\uspunctuation
+
+% Indicate bibliography file
+\addbibresource{../notes/refs_workshop.bib}
+
+% More bibliograpphy style settings
+\AtEveryBibitem{
+	\clearfield{labelmonth}
+}
+\setlength\bibhang{\parindent} % sets indentation in reference list; \parindent is default
+
+% COSTUMIZE THE THEME
+\definecolor{champagne}{RGB}{223, 227, 17}
+\definecolor{coolblack}{RGB}{100, 39, 111}
+\definecolor{hsggreen}{RGB}{0, 133, 63}
+\definecolor{dimgrey}{RGB}{112,128,144}
+\definecolor{ethblue}{RGB}{31,64,122}
+\definecolor{ethorange}{RGB}{149,96,19}
+
+% Change the progress bar color
+\setbeamercolor{progress bar}{fg=ethorange} 
+\setbeamercolor{title separator}{fg=ethorange}
+
+\setbeamercolor{frametitle}{bg=ethblue} % sostituisci dimgrey qui
+\setbeamercolor{alerted text}{%
+	fg=ethorange
+}
+% Change thickness of progrss bar
+\makeatletter
+\setlength{\metropolis@progressinheadfoot@linewidth}{1.7pt}
+\setlength{\metropolis@titleseparator@linewidth}{1.2pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{1.2pt}
+
+\setbeamertemplate{progress bar in section page}{
+	\setlength{\metropolis@progressonsectionpage}{%
+		\textwidth * \ratio{\thesection pt}{\totvalue{totalsection} pt}%
+	}%
+	\begin{tikzpicture}
+		\fill[bg] (0,0) rectangle (\textwidth, \metropolis@progressonsectionpage@linewidth);
+		\fill[fg] (0,0) rectangle (\metropolis@progressonsectionpage, \metropolis@progressonsectionpage@linewidth);
+	\end{tikzpicture}%
+}
+
+\makeatother
+
+\usepackage{totcount}
+
+\newcounter{totalsection}
+\regtotcounter{totalsection}
+
+\AtBeginDocument{%
+	\pretocmd{\section}{\refstepcounter{totalsection}}{\typeout{Yes, prepending was successful}}{\typeout{No, prepending was not it was successful}}%
+}%
+
+
+% Fancy question mark
+\DeclareMathSymbol{\qm}{\mathalpha}{operators}{"3F}
+\DeclareMathAlphabet{\mathbbold}{U}{bbold}{m}{n}
+
+\titlegraphic{%
+%	\includegraphics[width=.2\textwidth]{example-image-a}\hfill
+%	\includegraphics[width=.2\textwidth]{example-image-b}\hfill
+	\hfill\includegraphics[width=.2\textwidth]{eth}
+}
+
+\makeatletter
+\setbeamertemplate{title page}{
+	\begin{minipage}[b][\paperheight]{\textwidth}
+		\vfill%
+		\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+		\usebeamertemplate*{title separator}
+		\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+		\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+		\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+		\vfill
+		\ifx\inserttitlegraphic\@empty\else\inserttitlegraphic\fi
+		\vspace*{1cm}
+	\end{minipage}
+}
+\makeatother
+
+% Define smaller size than tiny
+\makeatletter
+\newcommand{\supertiny}{\@setfontsize{\supertiny}{5pt}{5pt}}
+\makeatother
+
+% Make non-current bullet points transparent
+\setbeamercovered{transparent}
+
+\usepackage{qtree}
 \usepackage{tikz}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{decorations.pathreplacing}
 
+\linespread{1.1}
+
+<<echo=FALSE, include=FALSE>>=
+# set paths
+# setwd(here::here("notes"))
+# Sys.setenv(TEXINPUTS=getwd(),
+#            BIBINPUTS=getwd(),
+#            BSTINPUTS=getwd())
+
+system(paste("biber", sub("\\.Rnw$", "", knitr::current_input())))
+@
+
+
+%% Document starts -------------------------------------------------------------
+
 \begin{document}
+
+
+%%------------------------------------------------------------------------------
+
+\section{Introduction}
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+
+    \tableofcontents
+    
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Introduction}
+
+    \begin{alertblock}{About me}
+    \small
+    
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item Roberto Valli
+        \item St. Gallen, ETH, UC Berkeley, ...?
+        \item 3rd year @ ICR
+        \item Nationalism, ethnic politics and sometimes partisanship
+        \item I love panel data $<3$
+    \end{itemize}
+
+    \end{alertblock}
+
+    \begin{alertblock}{Goals for today}
+    \small
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item Give you an overview of DiD literature
+        \item Discuss useful developments
+        \item Help you choose the right model for your data
+    \end{itemize}
+
+    \end{alertblock}
+%     
+\end{frame}
+
+%%------------------------------------------------------------------------------
 
 \section{Basic DiD Dust-Off}
 
@@ -28,7 +207,9 @@ numbering=fraction]{metropolis}
 \begin{frame}
 \frametitle{DiD setup}
     \centering\footnotesize
-    \begin{tikzpicture}
+
+
+    \begin{tikzpicture}[scale=0.85, transform shape]
     \node  (0) at (-1, 7) {y};
     \node  (1) at (-1, -0) {}; %Origin
     \node  (2) at (10, -0) {t};
@@ -53,18 +234,16 @@ numbering=fraction]{metropolis}
     % \node  (7) at (5, 6) {$Y_{i2}(1)\ | \ D = 1$};
     \draw [thick] (5, 6) to (2, 4);
     % treatment group (counterfactual)
-    % \fill (5, 4.5) circle (2pt) node[above=2pt] {$Y_{i2}(0)\ | \ D = 1$};
-    % \fill (8, 3.5) circle (2pt) node[right=2pt] {$Y_{i3}(0)\ | \ D = 1$};
-    % \node  (12) at (8, 3.5) {$Y_{i3}(0)\ | \ D = 1$};
-    % \draw [dash dot] (8, 3.5) to (5, 4.5);
-    % \draw [dash dot] (5, 4.5) to (2, 4);
+
     \end{tikzpicture}
+    
 \end{frame}
 
 \begin{frame}
 \frametitle{Counterfactual outcome}
     \centering\footnotesize
-    \begin{tikzpicture}
+    
+    \begin{tikzpicture}[scale=0.85, transform shape]
     \node  (0) at (-1, 7) {y};
     \node  (1) at (-1, -0) {}; %Origin
     \node  (2) at (10, -0) {t};
@@ -100,10 +279,12 @@ numbering=fraction]{metropolis}
     \end{tikzpicture}
 \end{frame}
 
+
 \begin{frame}
 \frametitle{Inference with DiD}
     \centering\footnotesize
-    \begin{tikzpicture}
+    
+    \begin{tikzpicture}[scale=0.85, transform shape]
     \node  (0) at (-1, 7) {y};
     \node  (1) at (-1, -0) {}; %Origin
     \node  (2) at (10, -0) {t};
@@ -146,10 +327,12 @@ numbering=fraction]{metropolis}
     \end{tikzpicture}
 \end{frame}
 
+
 \begin{frame}
 \frametitle{Three-period DiD}
+
     \centering\footnotesize
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=0.85, transform shape]
     \node  (0) at (-1, 7) {y};
     \node  (1) at (-1, -0) {}; %Origin
     \node  (2) at (10, -0) {t};
@@ -183,23 +366,375 @@ numbering=fraction]{metropolis}
     \draw [dash dot] (8, 3.5) to (5, 4.5);
     \draw [dash dot] (5, 4.5) to (2, 4);
     % other
-    % \node  (15) at (3.55, 2.35) {}; %additional
-    % \node  (16) at (3.55, 1.3) {$\gamma$};
-    % \node  (17) at (1.5, 1.5) {$\beta_1$};
-    % \node  (18) at (-0.2, 2) {$\alpha$};%
-    % 
-    % \draw [thick] (5.center) to (6.center);
-    % \draw [thick] (4.center) to (3.center);
-    % \draw [dash dot] (9.center) to (3.center);
-    % \draw [thick] (3.center) to (8.center); %dashed
-    % \draw [thick] (6.center) to (7.center);
-    % \draw [decorate,decoration={brace,raise=4pt},yshift=0pt] (8) to (9.center); %lower bracket
-    % \draw [decorate,decoration={brace,raise=4pt},yshift=0pt] (6) to (12.center); %upper bracket
-    % \draw [decorate,decoration={brace,raise=4pt},yshift=0pt] (3) to (6); %upper bracket
     \end{tikzpicture}
 \end{frame}
 
 
+\begin{frame}
+\frametitle{The brilliance of DiDs}
+
+    \begin{alertblock}{Inferential problem}
+    \small
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item Counterfactual outcomes as \textbf{missing data}
+        \item How to produce valid counterfactual outcome $\hat{Y}(0)| D = 1$?
+        \item $\rightarrow$ Find unbiased function $g(Y)$, s.t.  $E[ \hat{Y}(0)| D = 1 -  Y(0)| D = 1] = 0$
+        \item $\rightarrow$ Exploit parallel trends assumption and SUTVA
+    \end{itemize}
+
+    \end{alertblock}
+
+    \begin{alertblock}{Solutions in basic DiD}
+    \small
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item Traditionally, use linear $g(\dot)$ on \textbf{all} within-individual variation.
+        \item All ITEs need to have same weight
+        \item Easily estimated with TWFE, DiM, first-difference
+    \end{itemize}
+
+    \end{alertblock}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------
+
+\section{Limitations of basic DiD setting }
+
+\begin{frame}
+\frametitle{The breakthrough}
+
+    \begin{alertblock}{Mid 2010s}
+    \small
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item Econometricians question the validity of TWFE
+        \item Main culprit: DiD with staggered adoption.\\{\footnotesize (e.g., Goodman-Bacon 2021, Sun and Abrams 2021, Callaway and Sant'Anna 2021}
+        \item $\rightarrow$ Econometric lit. kinda left applied research behind \dots
+    \end{itemize}
+
+    \end{alertblock}
+
+    \begin{alertblock}{Problems identified}
+    \small
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item Researchers refer to theory of 2-period DiD, do completely different things.
+        \item TWFE makes problematic comparisons.
+        \item Overall TWFE ATT is weighted average of cohort-specific ATTs.
+        \item $\rightarrow$ Cohort-ATTs can get weird weights.
+        \item Pre-trends tests are underpowered, but also give false rejections
+        % \item Your turn!
+        % \item Wrap  up
+    \end{itemize}
+
+    \end{alertblock}
+
+\end{frame}
+
+
+
+%%------------------------------------------------------------------------------
+
+\section{New Approaches to DiD}
+
+
+\begin{frame}[fragile]
+    \frametitle{Example: Non-absorbing state treatment}
+    \scriptsize\centering
+
+    \resizebox{0.7\textwidth}{!}{
+            \Tree[. [.{N. treated units $>$ 1} [.{T = 2} {Classic DiD\\ (Sec. 4.2)} ]
+                                   [.{T $>$ 2} [.{Non-absorbing state\\ treatment} { {\texttt{GSC} (Sec. 4.43)}\\ {\texttt{fect} (Sec. 4.42)}\\ {\texttt{PanelMatch} (Sec. 4.43)} } ]
+                                             [.{Absorbing-state\\ treatment}
+                                                                              [.{Staggered\\ treatment}  { \texttt{did, did2s,}\\ \texttt{didimputation},\\ \texttt{DRDID, fixest},\\ \texttt{wfe} (Sec. 4.3.1-2)} ]
+                                                                              [.{Contemporaneous\\ treatment} {Classic DiD with multiple\\ periods (Sec 4.3.1)} ]]]]
+                    [.{N. treated units = 1} [.{SCM\\ (Sec. 4.1)} ]]
+                  ]
+    }
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Go-to packages in (early) 2023}
+
+
+    \begin{alertblock}{Staggered DiD settings}
+    \small
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item \texttt{did} package
+    \end{itemize}
+
+    \end{alertblock}
+
+    \begin{alertblock}{Non-absorbing state DiDs}
+    \small
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item \texttt{felm} package
+        \item \texttt{PanelMatch} package
+    \end{itemize}
+
+    \end{alertblock}
+    \small
+
+    <<warning=F, message=F, fig.keep='first', echo=T, fig.height=3, fig.align='center'>>=
+
+# Load packages
+library(tidyverse)
+library(fixest)
+library(did)
+library(fect)
+library(PanelMatch)
+
+@
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Example: Staggered treatment}
+    \scriptsize
+<<warning=F, message=F, fig.keep='first', echo=F, fig.height=3, fig.align='center'>>=
+
+# Attach data
+dat_did <- did::mpdta %>% 
+    mutate(post = (treat == 1 & year >= first.treat)^2)
+
+panelView::panelview(
+    dat_did,
+    lemp ~ post,
+    index = c("countyreal", "year"),
+    axis.lab = "off", ylab = "unit"
+)
+
+@
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Example: Staggered treatment}
+    \scriptsize
+<<warning=F, message=F, fig.keep='first', echo=T>>=
+
+# Fit models
+mod_twfe <- feols(lemp ~ post | countyreal + year, dat_did)
+mod_nvt <- att_gt("lemp", "year", "countyreal", "first.treat", 
+                  data = dat_did, control_group = "nevertreated")
+mod_nyt <- att_gt("lemp", "year", "countyreal", "first.treat", 
+                  data = dat_did, control_group = "notyettreated")
+
+
+@
+    
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Example: Staggered treatment cont'd}
+    \scriptsize
+<<warning=F, message=F, fig.keep='first', echo=T>>=
+
+
+# Compare estimates
+data.frame(twfe = mod_twfe$coefficients,
+           "did never" = aggte(mod_nvt, type = "simple")$overall.att,
+           "did notyet" = aggte(mod_nyt, type = "simple")$overall.att)
+
+
+@
+     
+
+    \begin{alertblock}{Insights}
+    \small
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+        \item TWFE's bias is generally conservative
+    \end{itemize}
+
+    \end{alertblock}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Example: Non-absorbing state}
+    \scriptsize
+<<warning=F, message=F,fig.keep='first', echo=F, fig.height=3, fig.align='center'>>=
+
+# Attach data
+dat_dem <- PanelMatch::dem
+
+panelView::panelview(
+    dat_dem,
+    tradewb ~ dem,
+    index = c("wbcode2", "year"),
+    axis.lab = "off"
+)
+
+@
+     
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Example: Non-absorbing state treatment}
+    \scriptsize
+    
+<<warning=F, message=F,fig.keep='first', echo=T, fig.height=3, fig.align='center'>>=
+
+# Fit baseline model
+mod_twfe <- feols(y ~ dem | wbcode2 + year, dat_dem)
+
+# Fit other models
+mod_ife <- fect(y ~ dem , dat_dem, index = c("wbcode2", "year"), se = F,
+                 method = "ife", na.rm = T)
+mod_mc <- fect(y ~ dem , dat_dem, index = c("wbcode2", "year"), se = F,
+                 method = "mc", na.rm = T)
+matched <- PanelMatch(lag = 5, lead = 0:5, unit.id = "wbcode2", time.id = "year",
+                      covs.formula = ~I(lag(y, 1:4)),
+                      treatment = "dem", outcome.var = "y", qoi = "att",
+                      data = dat_dem, refinement.method = "mahalanobis")
+mod_pm <- PanelEstimate(matched, dat_dem, pooled = T)
+
+@
+     
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Example: Non-absorbing state treatment cont'd}
+    \scriptsize
+    
+<<warning=F, message=F, echo=T, fig.height=3, fig.align='center'>>=
+
+
+# Compare estimates
+data.frame(twfe = as.numeric(mod_twfe$coefficients[1]),
+           "fect ife" = as.numeric(mod_ife$att.avg),
+           "fect mc" = as.numeric(mod_mc$att.avg),
+           "panelmatch" = as.numeric(summary(mod_pm)$summary[, 1]))
+
+@
+     
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Example: Non-absorbing state treatment cont'd}
+    \scriptsize
+    
+<<warning=F, message=F, fig.show="hold", out.width="49%", echo=F, fig.height=3, fig.align='center'>>=
+
+
+# nonmatched <- PanelMatch(lag = 5, lead = 0:5, unit.id = "wbcode2", time.id = "year",
+#                       covs.formula = ~ I(lag(tradewb, 1:4)) + I(lag(y, 1:4)),
+#                       treatment = "dem", outcome.var = "y", qoi = "att",
+#                       data = dat_dem, refinement.method = "none")
+
+# Check balance
+plot(mod_mc, show.points = F)
+balance_scatter(matched_set_list = matched, data = dat_dem, covariates = "y")
+
+@
+     
+
+\end{frame}
+
+
+
+%%------------------------------------------------------------------------------
+
+\section{Your Turn!}
+
+
+\begin{frame}
+\frametitle{Tell us your data struggles}
+
+    \begin{alertblock}{}
+
+    \begin{itemize}
+        \item Do you work with TSCS data?
+        \item Have you encountered limitations in TWFE models?
+        \item Has the absence of methods held you from researching sth?
+        \item $\dots$ 
+    \end{itemize}
+
+    \end{alertblock}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------
+
+\section{Wrap-up}
+
+
+\begin{frame}
+\frametitle{DiD as prediction exercise}
+
+    \begin{alertblock}{Problems with estimation led to rethink DiD}
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+    \small
+        \item Counterfactual outcomes as \textbf{non-linear prediction task}
+        \item $\rightarrow$ Generalized synthetic control
+        \item Counterfactual outcomes as \textbf{missing data}
+        \item $\rightarrow$ Matrix completion method
+        \item Counterfactual outcomes as \textbf{matching problem}
+        \item $\rightarrow$ PanelMatch method
+    \end{itemize}
+
+    \end{alertblock}
+
+    \begin{alertblock}{Outcome of the literature}
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+    \small
+        \item Different perspectives led to different solutions to problems.
+        \item Broad set of concrete tools to apply DiD logic in broad set of cases.
+        \item Great set of R packages!
+    \end{itemize}
+
+    \end{alertblock}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Debate: Let's talk causality!}
+
+    \begin{alertblock}{How causality is often discussed}
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+    \small
+        \item Your $X$ is not exogenous to $Y$: I don't believe you.
+        \item There might be confounders: I don't believe you.
+        \item $\rightarrow$ If a statistic is not \textbf{unbiased}, it might be anything.
+        % \item Counterfactual outcomes as \textbf{matching problem}
+        % \item $\rightarrow$ PanelMatch method
+    \end{itemize}
+
+    \end{alertblock}
+
+    \begin{alertblock}{A better way of discussing causality (?)}
+
+    \begin{itemize}[itemsep=0em, topsep=0pt]
+    \small
+        \item Your estimate is confounded: What is the chance that your results have another sign?
+        \item Your $X$ is not exogenous: Are you sure the variation means what you argue?
+        \item What kind of bias do you have, and what does it tell on the "true" $\tau$?
+        \item $\rightarrow$ Focus on substantive meaning of estimates and biases!
+    \end{itemize}
+
+    \end{alertblock}
+
+\end{frame}
 
 
 \end{document}
