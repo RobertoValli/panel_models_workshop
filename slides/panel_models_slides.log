@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  27 JAN 2023 00:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.21)  27 JAN 2023 09:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1857,8 +1857,29 @@ File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decora
-tions\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\vallir\AppData\L
-ocal\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+tions\pgflibrarydecorations.pathreplacing.code.tex))
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alert' on input line 200.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 200.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 200.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 11.74988pt
+(hyperref)                replaced by space on input line 200.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 200.
+
+(C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
@@ -1867,50 +1888,50 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'american'.
 LaTeX Font Info:    Trying to load font information for OT1+jkpss on input line
- 197.
+ 209.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ot1jkpss.fd
 File: ot1jkpss.fd 2007/07/16 Fontinst v1.928 font definitions for OT1/jkpss.
 ) (panel_models_slides.aux)
 \openout1 = `panel_models_slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 197.
-LaTeX Font Info:    Trying to load font information for OML+jkp on input line 1
-97.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 209.
+LaTeX Font Info:    Trying to load font information for OML+jkp on input line 2
+09.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 197.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 197.
-LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 1
-97.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 209.
+LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 2
+09.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 197.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 197.
-LaTeX Font Info:    ... okay on input line 197.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 197.
-LaTeX Font Info:    ... okay on input line 197.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 197.
-LaTeX Font Info:    ... okay on input line 197.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 197.
-LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 1
-97.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 209.
+LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 2
+09.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 197.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 209.
 LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 
-197.
+209.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 197.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 197.
-LaTeX Font Info:    ... okay on input line 197.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 197.
-LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1961,85 +1982,85 @@ kii
 \makeMPintoPDFobject=\count527
 \everyMPtoPDFconversion=\toks58
 )
-Package hyperref Info: Link coloring OFF on input line 197.
+Package hyperref Info: Link coloring OFF on input line 209.
 (panel_models_slides.out) (panel_models_slides.out)
 \@outlinefile=\write6
 \openout6 = `panel_models_slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/jkpss/m/n --> OT1/cmss/m/n on input line 197.
+(Font)                  OT1/jkpss/m/n --> OT1/cmss/m/n on input line 209.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/jkpss/b/n --> OT1/cmss/b/n on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/cmss/b/n on input line 209.
 \symnumbers=\mathgroup9
 \sympureletters=\mathgroup10
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/jkp/m/n --> OT1/jkp/m/n on input line 197.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 197.
+(Font)                  OT1/jkp/m/n --> OT1/jkp/m/n on input line 209.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `rm'
-(Font)                  OT1/jkp/b/n --> OT1/jkpss/b/n on input line 197.
+(Font)                  OT1/jkp/b/n --> OT1/jkpss/b/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `boldrm'
-(Font)                  OT1/jkp/b/n --> OT1/jkpss/b/n on input line 197.
+(Font)                  OT1/jkp/b/n --> OT1/jkpss/b/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `sf'
-(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `boldsf'
-(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 197.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 209.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/jkpss/m/n --> OT1/jkpss/m/n on input line 197.
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/jkpss/b/n --> OT1/jkpss/m/n on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/jkpss/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `rm'
-(Font)                  OT1/jkpss/m/n --> OT1/jkpss/m/n on input line 197.
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `boldrm'
-(Font)                  OT1/jkpss/b/n --> OT1/jkpss/m/n on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/jkpss/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `sf'
-(Font)                  OT1/jkpss/m/n --> OT1/jkpss/m/n on input line 197.
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `boldsf'
-(Font)                  OT1/jkpss/b/n --> OT1/jkpss/m/n on input line 197.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/jkpss/m/n on input line 209.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/jkpss/m/it --> OT1/jkpss/m/it on input line 197.
+(Font)                  OT1/jkpss/m/it --> OT1/jkpss/m/it on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/jkpss/b/it --> OT1/jkpss/m/it on input line 197.
+(Font)                  OT1/jkpss/b/it --> OT1/jkpss/m/it on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `rm'
-(Font)                  OT1/jkp/m/it --> OT1/jkpss/m/it on input line 197.
+(Font)                  OT1/jkp/m/it --> OT1/jkpss/m/it on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `boldrm'
-(Font)                  OT1/jkp/b/it --> OT1/jkpss/m/it on input line 197.
+(Font)                  OT1/jkp/b/it --> OT1/jkpss/m/it on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `sf'
-(Font)                  OT1/jkpss/m/it --> OT1/jkpss/m/it on input line 197.
+(Font)                  OT1/jkpss/m/it --> OT1/jkpss/m/it on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `boldsf'
-(Font)                  OT1/jkpss/b/it --> OT1/jkpss/m/it on input line 197.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 197.
+(Font)                  OT1/jkpss/b/it --> OT1/jkpss/m/it on input line 209.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/jkptt/m/n --> OT1/jkptt/m/n on input line 197.
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/jkptt/b/n --> OT1/jkptt/m/n on input line 197.
+(Font)                  OT1/jkptt/b/n --> OT1/jkptt/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `rm'
-(Font)                  OT1/jkptt/m/n --> OT1/jkptt/m/n on input line 197.
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `boldrm'
-(Font)                  OT1/jkptt/b/n --> OT1/jkptt/m/n on input line 197.
+(Font)                  OT1/jkptt/b/n --> OT1/jkptt/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `sf'
-(Font)                  OT1/jkptt/m/n --> OT1/jkptt/m/n on input line 197.
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/m/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `boldsf'
-(Font)                  OT1/jkptt/b/n --> OT1/jkptt/m/n on input line 197.
+(Font)                  OT1/jkptt/b/n --> OT1/jkptt/m/n on input line 209.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/jkpss/m/n --> OT1/jkpss/b/n on input line 197.
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/b/n on input line 209.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/jkpss/m/it --> OT1/jkpss/b/it on input line 197.
+(Font)                  OT1/jkpss/m/it --> OT1/jkpss/b/it on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/jkp/b/n --> OT1/jkp/b/n on input line 197.
+(Font)                  OT1/jkp/b/n --> OT1/jkp/b/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 197.
+(Font)                  OT1/jkpss/b/n --> OT1/jkpss/b/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/jkpss/m/n --> OT1/jkpss/b/n on input line 197.
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/b/n on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/jkpss/m/it --> OT1/jkpss/b/it on input line 197.
+(Font)                  OT1/jkpss/m/it --> OT1/jkpss/b/it on input line 209.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/jkptt/m/n --> OT1/jkptt/b/n on input line 197.
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/b/n on input line 209.
 
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-
 basic-dictionary-English.dict
@@ -2126,84 +2147,93 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'panel_models_slides.bbl' found.
 (panel_models_slides.bbl)
-Package biblatex Info: Reference section=0 on input line 197.
-Package biblatex Info: Reference segment=0 on input line 197.
+Package biblatex Info: Reference section=0 on input line 209.
+Package biblatex Info: Reference segment=0 on input line 209.
 Yes, prepending was successful
 (panel_models_slides.nav)
 LaTeX Font Info:    Trying to load font information for OML+jkpss on input line
- 202.
+ 211.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omljkpss.fd
 File: omljkpss.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for OMX+jkpss on input line
- 202.
+ 211.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omxjkpss.fd
 File: omxjkpss.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+jkpsya on input line 
-202.
+211.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpsya.fd
 File: ujkpsya.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+jkpsssyb on input lin
-e 202.
+e 211.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpsssyb.fd
 File: ujkpsssyb.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+jkpssmia on input lin
-e 202.
+e 211.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpssmia.fd
 File: ujkpssmia.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line 
-202.
+211.
 (C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <12> not available
-(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 202
-.
-LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <9> not available
-(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 202
-.
-LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <7> not available
-(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 202
-.
-[1
-
-{C:/Users/vallir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (panel_mode
-ls_slides.toc) [2
-
-]
 LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 242
+(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 211
 .
 LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <8.3> not available
-(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 242
+(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 211
 .
 LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <6> not available
-(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 242
+(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 211
 .
+LaTeX Font Info:    Trying to load font information for OT1+jkptt on input line
+ 211.
+(C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ot1jkptt.fd
+File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
+)
+<eth.png, id=36, 565.36218pt x 207.02344pt>
+File: eth.png Graphic file (type png)
+<use eth.png>
+Package pdftex.def Info: eth.png  used on input line 211.
+(pdftex.def)             Requested size: 79.66649pt x 29.16945pt.
 
-Overfull \vbox (0.12125pt too high) detected at line 242
+Overfull \vbox (15.95009pt too high) detected at line 211
  []
 
-[3
+[1
+
+{C:/Users/vallir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./eth.png>]
+LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <12> not available
+(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 216
+.
+LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <9> not available
+(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 216
+.
+LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <7> not available
+(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 216
+.
+[2
+
+] (panel_models_slides.toc) [3
 
 ] [4
 
-]
-LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <10> not available
-(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 282
-.
-LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <7.6> not available
-(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 282
-.
-[5
+] [5
 
 ] [6
 
-] [7
+]
+LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <10> not available
+(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 296
+.
+LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <7.6> not available
+(Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 296
+.
+[7
 
 ] [8
 
@@ -2211,13 +2241,28 @@ LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <7.6> not available
 
 ] [10
 
-]
-Overfull \vbox (15.08133pt too high) detected at line 476
- []
-
-[11
+] [11
 
 ] [12
+
+] [13
+
+]
+\openout4 = `panel_models_slides.vrb'.
+
+(panel_models_slides.vrb)
+Overfull \vbox (36.90636pt too high) detected at line 490
+ []
+
+[14
+
+] (panel_models_slides.vrb)
+Overfull \vbox (36.90636pt too high) detected at line 490
+ []
+
+[15
+
+] [16
 
 ]
 \openout4 = `panel_models_slides.vrb'.
@@ -2229,15 +2274,11 @@ LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <8> not available
 LaTeX Font Info:    Font shape `OT1/jkpss/m/it' in size <6.8> not available
 (Font)              Font shape `OT1/jkpss/m/sl' tried instead on input line 12.
 
-LaTeX Font Info:    Trying to load font information for OT1+jkptt on input line
- 12.
-(C:\Users\vallir\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ot1jkptt.fd
-File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
-))
-Overfull \vbox (8.65697pt too high) detected at line 499
+)
+Overfull \vbox (8.65697pt too high) detected at line 513
  []
 
-[13
+[17
 
 ]
 \openout4 = `panel_models_slides.vrb'.
@@ -2247,21 +2288,27 @@ LaTeX Font Info:    Font shape `OT1/jkptt/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/jkptt/m/sl' tried instead on input line 27.
 
 )
-Overfull \vbox (9.5658pt too high) detected at line 539
+Overfull \vbox (9.5658pt too high) detected at line 553
  []
 
-[14
+[18
+
+] (panel_models_slides.vrb)
+Overfull \vbox (9.5658pt too high) detected at line 553
+ []
+
+[19
 
 ]
 \openout4 = `panel_models_slides.vrb'.
 
 (panel_models_slides.vrb
-<figure/unnamed-chunk-3-1.pdf, id=131, 505.89pt x 216.81pt>
+<figure/unnamed-chunk-3-1.pdf, id=161, 505.89pt x 216.81pt>
 File: figure/unnamed-chunk-3-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-3-1.pdf>
 Package pdftex.def Info: figure/unnamed-chunk-3-1.pdf  used on input line 6.
 (pdftex.def)             Requested size: 398.3386pt x 170.71892pt.
-) [15
+) [20
 
  <./figure/unnamed-chunk-3-1.pdf>]
 \openout4 = `panel_models_slides.vrb'.
@@ -2269,59 +2316,65 @@ Package pdftex.def Info: figure/unnamed-chunk-3-1.pdf  used on input line 6.
 (panel_models_slides.vrb
 LaTeX Font Info:    Font shape `OT1/jkptt/m/it' in size <8> not available
 (Font)              Font shape `OT1/jkptt/m/sl' tried instead on input line 6.
-) [16
+) [21
 
 ]
 \openout4 = `panel_models_slides.vrb'.
 
-(panel_models_slides.vrb) [17
+(panel_models_slides.vrb) [22
+
+] (panel_models_slides.vrb) [23
 
 ]
 \openout4 = `panel_models_slides.vrb'.
 
 (panel_models_slides.vrb
-<figure/unnamed-chunk-6-1.pdf, id=153, 505.89pt x 216.81pt>
+<figure/unnamed-chunk-6-1.pdf, id=188, 505.89pt x 216.81pt>
 File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-6-1.pdf>
 Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 6.
 (pdftex.def)             Requested size: 398.3386pt x 170.71892pt.
-) [18
+) [24
 
  <./figure/unnamed-chunk-6-1.pdf>]
 \openout4 = `panel_models_slides.vrb'.
 
-(panel_models_slides.vrb) [19
+(panel_models_slides.vrb) [25
 
 ]
 \openout4 = `panel_models_slides.vrb'.
 
-(panel_models_slides.vrb) [20
+(panel_models_slides.vrb) [26
 
 ]
 \openout4 = `panel_models_slides.vrb'.
 
 (panel_models_slides.vrb
-<figure/unnamed-chunk-9-1.pdf, id=176, 505.89pt x 216.81pt>
+<figure/unnamed-chunk-9-1.pdf, id=211, 505.89pt x 216.81pt>
 File: figure/unnamed-chunk-9-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-9-1.pdf>
 Package pdftex.def Info: figure/unnamed-chunk-9-1.pdf  used on input line 7.
 (pdftex.def)             Requested size: 195.1881pt x 83.6524pt.
-<figure/unnamed-chunk-9-2.pdf, id=177, 505.89pt x 216.81pt>
+<figure/unnamed-chunk-9-2.pdf, id=212, 505.89pt x 216.81pt>
 File: figure/unnamed-chunk-9-2.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-9-2.pdf>
 Package pdftex.def Info: figure/unnamed-chunk-9-2.pdf  used on input line 8.
 (pdftex.def)             Requested size: 195.1881pt x 83.6524pt.
-) [21
+) [27
 
- <./figure/unnamed-chunk-9-1.pdf> <./figure/unnamed-chunk-9-2.pdf>] [22
+ <./figure/unnamed-chunk-9-1.pdf> <./figure/unnamed-chunk-9-2.pdf>] [28
 
-] [23
+] [29
 
-] [24
+] [30
 
-] [25
+] [31
 
-] [26
+] [32
+
+] [33
+
+] [34
 
 ]
 \tf@nav=\write7
@@ -2341,11 +2394,11 @@ Package logreq Info: Writing requests to 'panel_models_slides.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41098 strings out of 478032
- 835011 string characters out of 2827995
- 1579437 words of memory out of 3000000
- 58891 multiletter control sequences out of 15000+600000
- 557036 words of font info for 197 fonts, out of 8000000 for 9000
+ 41182 strings out of 478032
+ 836882 string characters out of 2827995
+ 1581784 words of memory out of 3000000
+ 58946 multiletter control sequences out of 15000+600000
+ 558537 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,133p,1958b,5360s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C
@@ -2357,14 +2410,15 @@ e1/public/kpfonts/jkpssbsc8a.pfb><C:/Users/vallir/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/kpfonts/jkpssmn8a.pfb><C:/Users/vallir/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/kpfonts/jkpssmn8a.pfb><C:/Users/vallir/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpssmne.pfb><C:/Users/vallir/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/valli
-r/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpttbn8a.pfb><C:/Us
-ers/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.p
-fb><C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jk
-pttmn8a.pfb>
-Output written on panel_models_slides.pdf (26 pages, 174714 bytes).
+Data/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpssmsc8a.pfb><C:/Users/
+vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/U
+sers/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpttbn8a.
+pfb><C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/j
+kpttmn8a.pfb><C:/Users/vallir/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+kpfonts/jkpttmn8a.pfb>
+Output written on panel_models_slides.pdf (34 pages, 204688 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 336 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

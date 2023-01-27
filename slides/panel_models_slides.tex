@@ -189,12 +189,26 @@ maxcitenames=2,
 
 \linespread{1.1}
 
+% Make non-current bullet points transparent
+\setbeamercovered{transparent}
+
+
+\title{~\\[0.5em] What to do with cross-sectional time-series data?}
+\subtitle{2023 CIS PhD winter retreat}
+%\date{\today}
+\date{}
+\author{\large \alert{Roberto Valli} \\ \small ~$\quad$  International Conflict Research, \ \texttt{roberto.valli@icr.gess.ethz.ch}}
+% \vspace{0.2cm}
+% \institute{}
+
 
 
 
 %% Document starts -------------------------------------------------------------
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
+	
+    \maketitle
 
 
 %%------------------------------------------------------------------------------
@@ -215,11 +229,11 @@ maxcitenames=2,
 \begin{frame}
 \frametitle{Introduction}
 
-    \begin{alertblock}{About me}
+    \begin{alertblock}{About me}<1->
     \small
     
     \begin{itemize}[itemsep=0em, topsep=0pt]
-        \item Roberto Valli
+        % \item Roberto Valli
         \item St. Gallen, ETH, UC Berkeley, ...?
         \item 3rd year @ ICR
         \item Nationalism, ethnic politics and sometimes partisanship
@@ -228,7 +242,7 @@ maxcitenames=2,
 
     \end{alertblock}
 
-    \begin{alertblock}{Goals for today}
+    \begin{alertblock}{Goals for today}<2->
     \small
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
@@ -415,7 +429,7 @@ maxcitenames=2,
 \begin{frame}
 \frametitle{The brilliance of DiDs}
 
-    \begin{alertblock}{Inferential problem}
+    \begin{alertblock}{Inferential problem}<1->
     \small
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
@@ -427,7 +441,7 @@ maxcitenames=2,
 
     \end{alertblock}
 
-    \begin{alertblock}{Solutions in basic DiD}
+    \begin{alertblock}{Solutions in basic DiD}<2->
     \small
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
@@ -444,8 +458,8 @@ maxcitenames=2,
 
 \section{Limitations of basic DiD setting }
 
-\begin{frame}
-\frametitle{The breakthrough}
+\begin{frame}[fragile]
+\frametitle{The breakthrough}<1->
 
     \begin{alertblock}{Mid 2010s}
     \small
@@ -458,7 +472,7 @@ maxcitenames=2,
 
     \end{alertblock}
 
-    \begin{alertblock}{Problems identified}
+    \begin{alertblock}{Problems identified}<2->
     \small
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
@@ -503,7 +517,7 @@ maxcitenames=2,
     \frametitle{Go-to packages in (early) 2023}
 
 
-    \begin{alertblock}{Staggered DiD settings}
+    \begin{alertblock}{Staggered DiD settings}<1->
     \small
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
@@ -512,7 +526,7 @@ maxcitenames=2,
 
     \end{alertblock}
 
-    \begin{alertblock}{Non-absorbing state DiDs}
+    \begin{alertblock}{Non-absorbing state DiDs}<2->
     \small
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
@@ -593,7 +607,7 @@ maxcitenames=2,
 \end{knitrout}
      
 
-    \begin{alertblock}{Insights}
+    \begin{alertblock}{Insights}<2->
     \small
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
@@ -728,7 +742,7 @@ maxcitenames=2,
 \begin{frame}
 \frametitle{DiD as prediction exercise}
 
-    \begin{alertblock}{Problems with estimation led to rethink DiD}
+    \begin{alertblock}{Problems with estimation led to rethink DiD}<1->
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
     \small
@@ -742,7 +756,7 @@ maxcitenames=2,
 
     \end{alertblock}
 
-    \begin{alertblock}{Outcome of the literature}
+    \begin{alertblock}{Outcome of the literature}<2->
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
     \small
@@ -759,7 +773,7 @@ maxcitenames=2,
 \begin{frame}
 \frametitle{Debate: Let's talk causality!}
 
-    \begin{alertblock}{How causality is often discussed}
+    \begin{alertblock}{How causality is often discussed}<1->
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
     \small
@@ -772,7 +786,7 @@ maxcitenames=2,
 
     \end{alertblock}
 
-    \begin{alertblock}{A better way of discussing causality (?)}
+    \begin{alertblock}{A better way of discussing causality (?)}<2->
 
     \begin{itemize}[itemsep=0em, topsep=0pt]
     \small
